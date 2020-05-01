@@ -22,12 +22,11 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
          super.viewDidLoad()
+        setupViews()
+        setConstraints()
      }
     
-    func setupViews(views: [UIView]) {
-        views.forEach({ self.view.addSubview($0) })
-        setConstraints()
-    }
+    func setupViews() { }
     
     func setConstraints() { }
 }

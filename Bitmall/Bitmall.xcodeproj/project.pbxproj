@@ -26,6 +26,8 @@
 		D13AE652245C7CFA00E4F067 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE651245C7CFA00E4F067 /* BasePresenter.swift */; };
 		D13AE654245C7D0700E4F067 /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE653245C7D0700E4F067 /* ViewType.swift */; };
 		D13AE656245C7D1600E4F067 /* PresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE655245C7D1600E4F067 /* PresenterType.swift */; };
+		D13AE658245C7D9700E4F067 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE657245C7D9700E4F067 /* HomePresenter.swift */; };
+		D13AE65B245C803100E4F067 /* UINavigationContoller+LargeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE65A245C803100E4F067 /* UINavigationContoller+LargeTitle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		D13AE651245C7CFA00E4F067 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		D13AE653245C7D0700E4F067 /* ViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
 		D13AE655245C7D1600E4F067 /* PresenterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterType.swift; sourceTree = "<group>"; };
+		D13AE657245C7D9700E4F067 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		D13AE65A245C803100E4F067 /* UINavigationContoller+LargeTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationContoller+LargeTitle.swift"; sourceTree = "<group>"; };
 		ECEF3FB91D2B95F8F73C531F /* Pods-Bitmall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitmall.debug.xcconfig"; path = "Target Support Files/Pods-Bitmall/Pods-Bitmall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,16 +159,17 @@
 		D13AE610245C733400E4F067 /* Bitmall */ = {
 			isa = PBXGroup;
 			children = (
-				D13AE650245C7CE600E4F067 /* Base */,
-				D13AE64D245C778300E4F067 /* Main */,
-				D13AE644245C74C900E4F067 /* Coordinator */,
-				D13AE641245C740300E4F067 /* Home */,
+				D13AE61F245C733700E4F067 /* Info.plist */,
 				D13AE611245C733400E4F067 /* AppDelegate.swift */,
 				D13AE613245C733400E4F067 /* SceneDelegate.swift */,
-				D13AE617245C733400E4F067 /* Main.storyboard */,
 				D13AE61A245C733700E4F067 /* Assets.xcassets */,
+				D13AE650245C7CE600E4F067 /* Base */,
+				D13AE659245C7FFC00E4F067 /* Categories */,
+				D13AE644245C74C900E4F067 /* Coordinator */,
+				D13AE641245C740300E4F067 /* Home */,
 				D13AE61C245C733700E4F067 /* LaunchScreen.storyboard */,
-				D13AE61F245C733700E4F067 /* Info.plist */,
+				D13AE64D245C778300E4F067 /* Main */,
+				D13AE617245C733400E4F067 /* Main.storyboard */,
 			);
 			path = Bitmall;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				D13AE647245C753D00E4F067 /* HomeCoordinator.swift */,
 				D13AE649245C759E00E4F067 /* HomeViewController.swift */,
 				D13AE64B245C765900E4F067 /* HomeViewControllerDelegate.swift */,
+				D13AE657245C7D9700E4F067 /* HomePresenter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -222,6 +228,14 @@
 				D13AE655245C7D1600E4F067 /* PresenterType.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		D13AE659245C7FFC00E4F067 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D13AE65A245C803100E4F067 /* UINavigationContoller+LargeTitle.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +444,8 @@
 				D13AE643245C742000E4F067 /* BaseViewController.swift in Sources */,
 				D13AE652245C7CFA00E4F067 /* BasePresenter.swift in Sources */,
 				D13AE654245C7D0700E4F067 /* ViewType.swift in Sources */,
+				D13AE65B245C803100E4F067 /* UINavigationContoller+LargeTitle.swift in Sources */,
+				D13AE658245C7D9700E4F067 /* HomePresenter.swift in Sources */,
 				D13AE612245C733400E4F067 /* AppDelegate.swift in Sources */,
 				D13AE614245C733400E4F067 /* SceneDelegate.swift in Sources */,
 				D13AE656245C7D1600E4F067 /* PresenterType.swift in Sources */,

@@ -9,20 +9,41 @@
 import UIKit
 
 final class HomeViewController: BaseViewController {
-    
+
     var scrollView: UIScrollView = {
         var scrollView = UIScrollView(frame: .zero)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.backgroundColor = UIColor.red
+        scrollView.backgroundColor = .white
         return scrollView
     }()
-    
-    
+
+
     weak var delegate: HomeViewControllerDelegate?
-    
+    var ownPresenter: HomePresenter {
+        return self.presenter as! HomePresenter
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews(views: [scrollView])
+        setupNavigationTitle()
+        setupNagivationItem()
+    }
+    
+    func setupNavigationTitle() {
+        navigationController?.setupLargeTitle("Hello")
+    }
+
+    func setupNagivationItem() {
+        let button: UIButton = UIButton()
+        button.setImage(UIImage(named: "starIcon"), for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.addTarget(self, action: #selector(touchStartButton(_:)), for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: button)
+        self.navigationItem.rightBarButtonItem = barButton
+    }
+    
+    override func setupViews() {
+        view.addSubview(scrollView)
     }
 
     override func setConstraints() {
@@ -33,6 +54,10 @@ final class HomeViewController: BaseViewController {
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ]
         NSLayoutConstraint.activate(constraints)
+    }
+
+    @objc func touchStartButton(_ button: UIButton) {
+        print("press")
     }
 }
 
