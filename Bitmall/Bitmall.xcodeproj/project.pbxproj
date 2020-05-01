@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FD7B5F210A583395F1379B0 /* Pods_Bitmall_BitmallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D8558CED2E4584228B74C6 /* Pods_Bitmall_BitmallUITests.framework */; };
+		8DFE00037199C2E9B1922774 /* Pods_BitmallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F78F9FAACDA7271C627F85C /* Pods_BitmallTests.framework */; };
+		9508925CBDC8C9125E4FC327 /* Pods_Bitmall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490B2C3E4B4D348C8937D424 /* Pods_Bitmall.framework */; };
+		D13AE612245C733400E4F067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE611245C733400E4F067 /* AppDelegate.swift */; };
+		D13AE614245C733400E4F067 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE613245C733400E4F067 /* SceneDelegate.swift */; };
+		D13AE616245C733400E4F067 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE615245C733400E4F067 /* ViewController.swift */; };
+		D13AE619245C733400E4F067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13AE617245C733400E4F067 /* Main.storyboard */; };
+		D13AE61B245C733700E4F067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13AE61A245C733700E4F067 /* Assets.xcassets */; };
+		D13AE61E245C733700E4F067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13AE61C245C733700E4F067 /* LaunchScreen.storyboard */; };
+		D13AE629245C733700E4F067 /* BitmallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE628245C733700E4F067 /* BitmallTests.swift */; };
+		D13AE634245C733700E4F067 /* BitmallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE633245C733700E4F067 /* BitmallUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D13AE625245C733700E4F067 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D13AE606245C733400E4F067 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D13AE60D245C733400E4F067;
+			remoteInfo = Bitmall;
+		};
+		D13AE630245C733700E4F067 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D13AE606245C733400E4F067 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D13AE60D245C733400E4F067;
+			remoteInfo = Bitmall;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		363D7DA44869A3707FE8F42B /* Pods-BitmallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitmallTests.debug.xcconfig"; path = "Target Support Files/Pods-BitmallTests/Pods-BitmallTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F610A41EE0220B597D1FB94 /* Pods-Bitmall-BitmallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitmall-BitmallUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bitmall-BitmallUITests/Pods-Bitmall-BitmallUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		40D8558CED2E4584228B74C6 /* Pods_Bitmall_BitmallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitmall_BitmallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		444CD5ADB7B7701D39F92D66 /* Pods-Bitmall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitmall.release.xcconfig"; path = "Target Support Files/Pods-Bitmall/Pods-Bitmall.release.xcconfig"; sourceTree = "<group>"; };
+		490B2C3E4B4D348C8937D424 /* Pods_Bitmall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitmall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5ABA168970A3253DBAE8DB /* Pods-BitmallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitmallTests.release.xcconfig"; path = "Target Support Files/Pods-BitmallTests/Pods-BitmallTests.release.xcconfig"; sourceTree = "<group>"; };
+		8F78F9FAACDA7271C627F85C /* Pods_BitmallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitmallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E1848C6456B3FE66653DBD2 /* Pods-Bitmall-BitmallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitmall-BitmallUITests.release.xcconfig"; path = "Target Support Files/Pods-Bitmall-BitmallUITests/Pods-Bitmall-BitmallUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D13AE60E245C733400E4F067 /* Bitmall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitmall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D13AE611245C733400E4F067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D13AE613245C733400E4F067 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D13AE615245C733400E4F067 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D13AE618245C733400E4F067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D13AE61A245C733700E4F067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D13AE61D245C733700E4F067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D13AE61F245C733700E4F067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D13AE624245C733700E4F067 /* BitmallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitmallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D13AE628245C733700E4F067 /* BitmallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmallTests.swift; sourceTree = "<group>"; };
+		D13AE62A245C733700E4F067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D13AE62F245C733700E4F067 /* BitmallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitmallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D13AE633245C733700E4F067 /* BitmallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmallUITests.swift; sourceTree = "<group>"; };
+		D13AE635245C733700E4F067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECEF3FB91D2B95F8F73C531F /* Pods-Bitmall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitmall.debug.xcconfig"; path = "Target Support Files/Pods-Bitmall/Pods-Bitmall.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D13AE60B245C733400E4F067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9508925CBDC8C9125E4FC327 /* Pods_Bitmall.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D13AE621245C733700E4F067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DFE00037199C2E9B1922774 /* Pods_BitmallTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D13AE62C245C733700E4F067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD7B5F210A583395F1379B0 /* Pods_Bitmall_BitmallUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0931E863FF4338AD131FD422 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				490B2C3E4B4D348C8937D424 /* Pods_Bitmall.framework */,
+				40D8558CED2E4584228B74C6 /* Pods_Bitmall_BitmallUITests.framework */,
+				8F78F9FAACDA7271C627F85C /* Pods_BitmallTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3853F330BDC9491D79D194B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECEF3FB91D2B95F8F73C531F /* Pods-Bitmall.debug.xcconfig */,
+				444CD5ADB7B7701D39F92D66 /* Pods-Bitmall.release.xcconfig */,
+				3F610A41EE0220B597D1FB94 /* Pods-Bitmall-BitmallUITests.debug.xcconfig */,
+				9E1848C6456B3FE66653DBD2 /* Pods-Bitmall-BitmallUITests.release.xcconfig */,
+				363D7DA44869A3707FE8F42B /* Pods-BitmallTests.debug.xcconfig */,
+				8F5ABA168970A3253DBAE8DB /* Pods-BitmallTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D13AE605245C733400E4F067 = {
+			isa = PBXGroup;
+			children = (
+				D13AE610245C733400E4F067 /* Bitmall */,
+				D13AE627245C733700E4F067 /* BitmallTests */,
+				D13AE632245C733700E4F067 /* BitmallUITests */,
+				D13AE60F245C733400E4F067 /* Products */,
+				B3853F330BDC9491D79D194B /* Pods */,
+				0931E863FF4338AD131FD422 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D13AE60F245C733400E4F067 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D13AE60E245C733400E4F067 /* Bitmall.app */,
+				D13AE624245C733700E4F067 /* BitmallTests.xctest */,
+				D13AE62F245C733700E4F067 /* BitmallUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D13AE610245C733400E4F067 /* Bitmall */ = {
+			isa = PBXGroup;
+			children = (
+				D13AE611245C733400E4F067 /* AppDelegate.swift */,
+				D13AE613245C733400E4F067 /* SceneDelegate.swift */,
+				D13AE615245C733400E4F067 /* ViewController.swift */,
+				D13AE617245C733400E4F067 /* Main.storyboard */,
+				D13AE61A245C733700E4F067 /* Assets.xcassets */,
+				D13AE61C245C733700E4F067 /* LaunchScreen.storyboard */,
+				D13AE61F245C733700E4F067 /* Info.plist */,
+			);
+			path = Bitmall;
+			sourceTree = "<group>";
+		};
+		D13AE627245C733700E4F067 /* BitmallTests */ = {
+			isa = PBXGroup;
+			children = (
+				D13AE628245C733700E4F067 /* BitmallTests.swift */,
+				D13AE62A245C733700E4F067 /* Info.plist */,
+			);
+			path = BitmallTests;
+			sourceTree = "<group>";
+		};
+		D13AE632245C733700E4F067 /* BitmallUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D13AE633245C733700E4F067 /* BitmallUITests.swift */,
+				D13AE635245C733700E4F067 /* Info.plist */,
+			);
+			path = BitmallUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D13AE60D245C733400E4F067 /* Bitmall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D13AE638245C733700E4F067 /* Build configuration list for PBXNativeTarget "Bitmall" */;
+			buildPhases = (
+				BC4665691A1233AEBD90D216 /* [CP] Check Pods Manifest.lock */,
+				D13AE60A245C733400E4F067 /* Sources */,
+				D13AE60B245C733400E4F067 /* Frameworks */,
+				D13AE60C245C733400E4F067 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bitmall;
+			productName = Bitmall;
+			productReference = D13AE60E245C733400E4F067 /* Bitmall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D13AE623245C733700E4F067 /* BitmallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D13AE63B245C733700E4F067 /* Build configuration list for PBXNativeTarget "BitmallTests" */;
+			buildPhases = (
+				7D25F9012247A9DD7B0A7DEA /* [CP] Check Pods Manifest.lock */,
+				D13AE620245C733700E4F067 /* Sources */,
+				D13AE621245C733700E4F067 /* Frameworks */,
+				D13AE622245C733700E4F067 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D13AE626245C733700E4F067 /* PBXTargetDependency */,
+			);
+			name = BitmallTests;
+			productName = BitmallTests;
+			productReference = D13AE624245C733700E4F067 /* BitmallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D13AE62E245C733700E4F067 /* BitmallUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D13AE63E245C733700E4F067 /* Build configuration list for PBXNativeTarget "BitmallUITests" */;
+			buildPhases = (
+				98A6CF72DBBF66B6B48991E0 /* [CP] Check Pods Manifest.lock */,
+				D13AE62B245C733700E4F067 /* Sources */,
+				D13AE62C245C733700E4F067 /* Frameworks */,
+				D13AE62D245C733700E4F067 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D13AE631245C733700E4F067 /* PBXTargetDependency */,
+			);
+			name = BitmallUITests;
+			productName = BitmallUITests;
+			productReference = D13AE62F245C733700E4F067 /* BitmallUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D13AE606245C733400E4F067 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Carlos Pava";
+				TargetAttributes = {
+					D13AE60D245C733400E4F067 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					D13AE623245C733700E4F067 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D13AE60D245C733400E4F067;
+					};
+					D13AE62E245C733700E4F067 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D13AE60D245C733400E4F067;
+					};
+				};
+			};
+			buildConfigurationList = D13AE609245C733400E4F067 /* Build configuration list for PBXProject "Bitmall" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D13AE605245C733400E4F067;
+			productRefGroup = D13AE60F245C733400E4F067 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D13AE60D245C733400E4F067 /* Bitmall */,
+				D13AE623245C733700E4F067 /* BitmallTests */,
+				D13AE62E245C733700E4F067 /* BitmallUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D13AE60C245C733400E4F067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D13AE61E245C733700E4F067 /* LaunchScreen.storyboard in Resources */,
+				D13AE61B245C733700E4F067 /* Assets.xcassets in Resources */,
+				D13AE619245C733400E4F067 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D13AE622245C733700E4F067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D13AE62D245C733700E4F067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D25F9012247A9DD7B0A7DEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitmallTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98A6CF72DBBF66B6B48991E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bitmall-BitmallUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC4665691A1233AEBD90D216 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bitmall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D13AE60A245C733400E4F067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D13AE616245C733400E4F067 /* ViewController.swift in Sources */,
+				D13AE612245C733400E4F067 /* AppDelegate.swift in Sources */,
+				D13AE614245C733400E4F067 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D13AE620245C733700E4F067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D13AE629245C733700E4F067 /* BitmallTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D13AE62B245C733700E4F067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D13AE634245C733700E4F067 /* BitmallUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D13AE626245C733700E4F067 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D13AE60D245C733400E4F067 /* Bitmall */;
+			targetProxy = D13AE625245C733700E4F067 /* PBXContainerItemProxy */;
+		};
+		D13AE631245C733700E4F067 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D13AE60D245C733400E4F067 /* Bitmall */;
+			targetProxy = D13AE630245C733700E4F067 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D13AE617245C733400E4F067 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D13AE618245C733400E4F067 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D13AE61C245C733700E4F067 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D13AE61D245C733700E4F067 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D13AE636245C733700E4F067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D13AE637245C733700E4F067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D13AE639245C733700E4F067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECEF3FB91D2B95F8F73C531F /* Pods-Bitmall.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6QB93LRJD;
+				INFOPLIST_FILE = Bitmall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fastlane.Bitmall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D13AE63A245C733700E4F067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 444CD5ADB7B7701D39F92D66 /* Pods-Bitmall.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6QB93LRJD;
+				INFOPLIST_FILE = Bitmall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fastlane.Bitmall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D13AE63C245C733700E4F067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 363D7DA44869A3707FE8F42B /* Pods-BitmallTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6QB93LRJD;
+				INFOPLIST_FILE = BitmallTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fastlane.BitmallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitmall.app/Bitmall";
+			};
+			name = Debug;
+		};
+		D13AE63D245C733700E4F067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F5ABA168970A3253DBAE8DB /* Pods-BitmallTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6QB93LRJD;
+				INFOPLIST_FILE = BitmallTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fastlane.BitmallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitmall.app/Bitmall";
+			};
+			name = Release;
+		};
+		D13AE63F245C733700E4F067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F610A41EE0220B597D1FB94 /* Pods-Bitmall-BitmallUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6QB93LRJD;
+				INFOPLIST_FILE = BitmallUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fastlane.BitmallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bitmall;
+			};
+			name = Debug;
+		};
+		D13AE640245C733700E4F067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E1848C6456B3FE66653DBD2 /* Pods-Bitmall-BitmallUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6QB93LRJD;
+				INFOPLIST_FILE = BitmallUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fastlane.BitmallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bitmall;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D13AE609245C733400E4F067 /* Build configuration list for PBXProject "Bitmall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D13AE636245C733700E4F067 /* Debug */,
+				D13AE637245C733700E4F067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D13AE638245C733700E4F067 /* Build configuration list for PBXNativeTarget "Bitmall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D13AE639245C733700E4F067 /* Debug */,
+				D13AE63A245C733700E4F067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D13AE63B245C733700E4F067 /* Build configuration list for PBXNativeTarget "BitmallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D13AE63C245C733700E4F067 /* Debug */,
+				D13AE63D245C733700E4F067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D13AE63E245C733700E4F067 /* Build configuration list for PBXNativeTarget "BitmallUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D13AE63F245C733700E4F067 /* Debug */,
+				D13AE640245C733700E4F067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D13AE606245C733400E4F067 /* Project object */;
+}
