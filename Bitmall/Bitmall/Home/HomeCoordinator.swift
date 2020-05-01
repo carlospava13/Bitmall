@@ -20,6 +20,7 @@ class HomeCoordinator: CoordinatorType {
     func start() {
         let homeVC = HomeViewController()
         homeVC.delegate = self
+        homeVC.presenter = HomePresenter()
         self.navigationController.viewControllers = [homeVC]
     }
 }

@@ -8,8 +8,15 @@
 
 import Foundation
 
-class BasePresenter {
+class BasePresenter: PresenterType {
     
     weak var view: ViewType?
     
+    func bind(_ view: ViewType) {
+        self.view = view
+    }
+    
+    func unBind() {
+        self.view = nil
+    }
 }

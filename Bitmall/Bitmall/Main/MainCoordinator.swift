@@ -9,17 +9,17 @@
 import UIKit
 
 class MainCoordinator: CoordinatorType {
-    
+
     unowned let navigationController: UINavigationController
-    
+
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+
     func start() {
         let homeVC = HomeViewController()
-         homeVC.delegate = self
-         self.navigationController.viewControllers = [homeVC]
+        homeVC.delegate = self
+        navigationController.viewControllers = [homeVC]
     }
 }
 

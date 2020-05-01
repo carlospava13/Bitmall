@@ -6,8 +6,21 @@
 //  Copyright © 2020 Carlos Pava. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class HomePresenter: BasePresenter {
-    
+
+    var ownView: HomeView {
+        return view as! HomeView
+    }
+
+    func getModels() {
+        let models = [
+            HomeModel(title: "Home1", icon: UIImage(named: "starIcon")),
+            HomeModel(title: "Home2", icon: UIImage(named: "starIcon")),
+            HomeModel(title: "Home3", icon: UIImage(named: "starIcon"))
+        ]
+
+        ownView.setHomeModels(models)
+    }
 }

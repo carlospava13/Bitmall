@@ -28,6 +28,16 @@
 		D13AE656245C7D1600E4F067 /* PresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE655245C7D1600E4F067 /* PresenterType.swift */; };
 		D13AE658245C7D9700E4F067 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE657245C7D9700E4F067 /* HomePresenter.swift */; };
 		D13AE65B245C803100E4F067 /* UINavigationContoller+LargeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE65A245C803100E4F067 /* UINavigationContoller+LargeTitle.swift */; };
+		D13AE65E245C890200E4F067 /* CollectionCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE65D245C890200E4F067 /* CollectionCustom.swift */; };
+		D13AE660245C8A9200E4F067 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE65F245C8A9200E4F067 /* GenericDataSource.swift */; };
+		D13AE662245C8AA700E4F067 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE661245C8AA700E4F067 /* BaseCollectionCell.swift */; };
+		D13AE664245C8E8800E4F067 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE663245C8E8800E4F067 /* DynamicValue.swift */; };
+		D13AE666245C8F4700E4F067 /* GenericDinamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE665245C8F4700E4F067 /* GenericDinamic.swift */; };
+		D13AE668245C90AA00E4F067 /* HomeCollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE667245C90AA00E4F067 /* HomeCollectionAdapter.swift */; };
+		D13AE66A245C90CD00E4F067 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE669245C90CD00E4F067 /* HomeModel.swift */; };
+		D13AE66C245C911E00E4F067 /* SectionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */; };
+		D13AE66E245C91A100E4F067 /* CollectionViewCellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66D245C91A100E4F067 /* CollectionViewCellIdentifier.swift */; };
+		D13AE670245C953600E4F067 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66F245C953600E4F067 /* HomeContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +90,16 @@
 		D13AE655245C7D1600E4F067 /* PresenterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterType.swift; sourceTree = "<group>"; };
 		D13AE657245C7D9700E4F067 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		D13AE65A245C803100E4F067 /* UINavigationContoller+LargeTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationContoller+LargeTitle.swift"; sourceTree = "<group>"; };
+		D13AE65D245C890200E4F067 /* CollectionCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCustom.swift; sourceTree = "<group>"; };
+		D13AE65F245C8A9200E4F067 /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		D13AE661245C8AA700E4F067 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
+		D13AE663245C8E8800E4F067 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		D13AE665245C8F4700E4F067 /* GenericDinamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDinamic.swift; sourceTree = "<group>"; };
+		D13AE667245C90AA00E4F067 /* HomeCollectionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionAdapter.swift; sourceTree = "<group>"; };
+		D13AE669245C90CD00E4F067 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCollectionCell.swift; sourceTree = "<group>"; };
+		D13AE66D245C91A100E4F067 /* CollectionViewCellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellIdentifier.swift; sourceTree = "<group>"; };
+		D13AE66F245C953600E4F067 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
 		ECEF3FB91D2B95F8F73C531F /* Pods-Bitmall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitmall.debug.xcconfig"; path = "Target Support Files/Pods-Bitmall/Pods-Bitmall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +179,7 @@
 		D13AE610245C733400E4F067 /* Bitmall */ = {
 			isa = PBXGroup;
 			children = (
+				D13AE65C245C88E800E4F067 /* CollectionCustom */,
 				D13AE61F245C733700E4F067 /* Info.plist */,
 				D13AE611245C733400E4F067 /* AppDelegate.swift */,
 				D13AE613245C733400E4F067 /* SceneDelegate.swift */,
@@ -199,6 +220,10 @@
 				D13AE649245C759E00E4F067 /* HomeViewController.swift */,
 				D13AE64B245C765900E4F067 /* HomeViewControllerDelegate.swift */,
 				D13AE657245C7D9700E4F067 /* HomePresenter.swift */,
+				D13AE667245C90AA00E4F067 /* HomeCollectionAdapter.swift */,
+				D13AE669245C90CD00E4F067 /* HomeModel.swift */,
+				D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */,
+				D13AE66F245C953600E4F067 /* HomeContract.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -236,6 +261,19 @@
 				D13AE65A245C803100E4F067 /* UINavigationContoller+LargeTitle.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		D13AE65C245C88E800E4F067 /* CollectionCustom */ = {
+			isa = PBXGroup;
+			children = (
+				D13AE65D245C890200E4F067 /* CollectionCustom.swift */,
+				D13AE65F245C8A9200E4F067 /* GenericDataSource.swift */,
+				D13AE661245C8AA700E4F067 /* BaseCollectionCell.swift */,
+				D13AE663245C8E8800E4F067 /* DynamicValue.swift */,
+				D13AE665245C8F4700E4F067 /* GenericDinamic.swift */,
+				D13AE66D245C91A100E4F067 /* CollectionViewCellIdentifier.swift */,
+			);
+			path = CollectionCustom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,18 +480,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				D13AE643245C742000E4F067 /* BaseViewController.swift in Sources */,
+				D13AE670245C953600E4F067 /* HomeContract.swift in Sources */,
 				D13AE652245C7CFA00E4F067 /* BasePresenter.swift in Sources */,
 				D13AE654245C7D0700E4F067 /* ViewType.swift in Sources */,
 				D13AE65B245C803100E4F067 /* UINavigationContoller+LargeTitle.swift in Sources */,
 				D13AE658245C7D9700E4F067 /* HomePresenter.swift in Sources */,
 				D13AE612245C733400E4F067 /* AppDelegate.swift in Sources */,
+				D13AE66E245C91A100E4F067 /* CollectionViewCellIdentifier.swift in Sources */,
+				D13AE668245C90AA00E4F067 /* HomeCollectionAdapter.swift in Sources */,
 				D13AE614245C733400E4F067 /* SceneDelegate.swift in Sources */,
+				D13AE66A245C90CD00E4F067 /* HomeModel.swift in Sources */,
 				D13AE656245C7D1600E4F067 /* PresenterType.swift in Sources */,
+				D13AE65E245C890200E4F067 /* CollectionCustom.swift in Sources */,
+				D13AE666245C8F4700E4F067 /* GenericDinamic.swift in Sources */,
 				D13AE64C245C765900E4F067 /* HomeViewControllerDelegate.swift in Sources */,
+				D13AE664245C8E8800E4F067 /* DynamicValue.swift in Sources */,
+				D13AE662245C8AA700E4F067 /* BaseCollectionCell.swift in Sources */,
+				D13AE660245C8A9200E4F067 /* GenericDataSource.swift in Sources */,
 				D13AE646245C74E000E4F067 /* CoordinatorType.swift in Sources */,
 				D13AE64A245C759E00E4F067 /* HomeViewController.swift in Sources */,
 				D13AE64F245C778F00E4F067 /* MainCoordinator.swift in Sources */,
 				D13AE648245C753D00E4F067 /* HomeCoordinator.swift in Sources */,
+				D13AE66C245C911E00E4F067 /* SectionCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

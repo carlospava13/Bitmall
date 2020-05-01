@@ -16,21 +16,30 @@ final class HomeViewController: BaseViewController {
         scrollView.backgroundColor = .white
         return scrollView
     }()
-
-
+    
+    var collectionView: UICollectionView = {
+        var collectionView = UICollectionView()
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.isPagingEnabled = true
+        collectionView.collectionViewLayout = CollectionViewHorizontalCustom()
+        return collectionView
+    }()
+    
+    var collectionAdapter: HomeCollectionAdapter?
     weak var delegate: HomeViewControllerDelegate?
-    var ownPresenter: HomePresenter {
-        return self.presenter as! HomePresenter
+    var ownPresenter: HomePresenterType {
+        return presenter as! HomePresenterType
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationTitle()
         setupNagivationItem()
+        setupCollectionView()
     }
     
     func setupNavigationTitle() {
-        navigationController?.setupLargeTitle("Hello")
+        navigationController?.setupLargeTitle("Home")
     }
 
     func setupNagivationItem() {
@@ -44,6 +53,7 @@ final class HomeViewController: BaseViewController {
     
     override func setupViews() {
         view.addSubview(scrollView)
+        scrollView.addSubview(collectionView)
     }
 
     override func setConstraints() {
@@ -55,9 +65,14 @@ final class HomeViewController: BaseViewController {
         ]
         NSLayoutConstraint.activate(constraints)
     }
+    
+    private func setupCollectionView() {
+        collectionAdapter = HomeCollectionAdapter(collectionView: collectionView, identifierCell: .sectionCollectionCell)
+        collectionView.dataSource = collectionAdapter
+    }
 
     @objc func touchStartButton(_ button: UIButton) {
-        print("press")
+        delegate?.nextPage()
     }
 }
 
