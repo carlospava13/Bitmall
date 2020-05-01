@@ -18,6 +18,8 @@ class BaseViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    weak var presenter: PresenterType?
+    
     override func viewDidLoad() {
          super.viewDidLoad()
      }

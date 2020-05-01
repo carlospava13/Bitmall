@@ -23,6 +23,9 @@
 		D13AE64A245C759E00E4F067 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE649245C759E00E4F067 /* HomeViewController.swift */; };
 		D13AE64C245C765900E4F067 /* HomeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE64B245C765900E4F067 /* HomeViewControllerDelegate.swift */; };
 		D13AE64F245C778F00E4F067 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE64E245C778F00E4F067 /* MainCoordinator.swift */; };
+		D13AE652245C7CFA00E4F067 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE651245C7CFA00E4F067 /* BasePresenter.swift */; };
+		D13AE654245C7D0700E4F067 /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE653245C7D0700E4F067 /* ViewType.swift */; };
+		D13AE656245C7D1600E4F067 /* PresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE655245C7D1600E4F067 /* PresenterType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		D13AE649245C759E00E4F067 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D13AE64B245C765900E4F067 /* HomeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerDelegate.swift; sourceTree = "<group>"; };
 		D13AE64E245C778F00E4F067 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		D13AE651245C7CFA00E4F067 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		D13AE653245C7D0700E4F067 /* ViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
+		D13AE655245C7D1600E4F067 /* PresenterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterType.swift; sourceTree = "<group>"; };
 		ECEF3FB91D2B95F8F73C531F /* Pods-Bitmall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitmall.debug.xcconfig"; path = "Target Support Files/Pods-Bitmall/Pods-Bitmall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +155,7 @@
 		D13AE610245C733400E4F067 /* Bitmall */ = {
 			isa = PBXGroup;
 			children = (
+				D13AE650245C7CE600E4F067 /* Base */,
 				D13AE64D245C778300E4F067 /* Main */,
 				D13AE644245C74C900E4F067 /* Coordinator */,
 				D13AE641245C740300E4F067 /* Home */,
@@ -158,7 +165,6 @@
 				D13AE61A245C733700E4F067 /* Assets.xcassets */,
 				D13AE61C245C733700E4F067 /* LaunchScreen.storyboard */,
 				D13AE61F245C733700E4F067 /* Info.plist */,
-				D13AE642245C742000E4F067 /* BaseViewController.swift */,
 			);
 			path = Bitmall;
 			sourceTree = "<group>";
@@ -205,6 +211,17 @@
 				D13AE64E245C778F00E4F067 /* MainCoordinator.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		D13AE650245C7CE600E4F067 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D13AE642245C742000E4F067 /* BaseViewController.swift */,
+				D13AE651245C7CFA00E4F067 /* BasePresenter.swift */,
+				D13AE653245C7D0700E4F067 /* ViewType.swift */,
+				D13AE655245C7D1600E4F067 /* PresenterType.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,8 +428,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D13AE643245C742000E4F067 /* BaseViewController.swift in Sources */,
+				D13AE652245C7CFA00E4F067 /* BasePresenter.swift in Sources */,
+				D13AE654245C7D0700E4F067 /* ViewType.swift in Sources */,
 				D13AE612245C733400E4F067 /* AppDelegate.swift in Sources */,
 				D13AE614245C733400E4F067 /* SceneDelegate.swift in Sources */,
+				D13AE656245C7D1600E4F067 /* PresenterType.swift in Sources */,
 				D13AE64C245C765900E4F067 /* HomeViewControllerDelegate.swift in Sources */,
 				D13AE646245C74E000E4F067 /* CoordinatorType.swift in Sources */,
 				D13AE64A245C759E00E4F067 /* HomeViewController.swift in Sources */,
