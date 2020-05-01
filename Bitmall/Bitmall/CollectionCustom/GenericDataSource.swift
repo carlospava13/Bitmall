@@ -16,10 +16,6 @@ class GenericDataSource<Cell:BaseCollectionCell, T>: GenericDinamic<T>, UICollec
         self.identifierCell = identifierCell.rawValue
     }
     
-    func set(data:[T]) {
-        self.data = DynamicValue(data)
-    }
-
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
