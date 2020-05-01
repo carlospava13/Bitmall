@@ -17,4 +17,15 @@ class BaseViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    override func viewDidLoad() {
+         super.viewDidLoad()
+     }
+    
+    func setupViews(views: [UIView]) {
+        views.forEach({ self.view.addSubview($0) })
+        setConstraints()
+    }
+    
+    func setConstraints() { }
 }
