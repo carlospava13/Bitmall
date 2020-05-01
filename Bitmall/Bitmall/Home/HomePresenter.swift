@@ -8,13 +8,13 @@
 
 import UIKit
 
-class HomePresenter: BasePresenter {
+final class HomePresenter: BasePresenter, HomePresenterType {
 
     var ownView: HomeView {
         return view as! HomeView
     }
 
-    func getModels() {
+    func getHomeModel() {
         let models = [
             HomeModel(title: "Home1", icon: UIImage(named: "starIcon")),
             HomeModel(title: "Home2", icon: UIImage(named: "starIcon")),

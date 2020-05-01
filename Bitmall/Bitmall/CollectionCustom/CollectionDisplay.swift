@@ -1,5 +1,5 @@
 //
-//  PresenterType.swift
+//  CollectionDisplay.swift
 //  Bitmall
 //
 //  Created by Carlos Pava on 1/05/20.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-protocol PresenterType: AnyObject {
-    func bind(_ view: ViewType)
-    func unBind()
+enum CollectionDisplay {
+    case grid
+    case inline
+    case list
 }

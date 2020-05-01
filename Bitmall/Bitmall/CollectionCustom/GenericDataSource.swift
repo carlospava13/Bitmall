@@ -9,19 +9,15 @@
 import UIKit
 
 class GenericDataSource<Cell:BaseCollectionCell, T>: GenericDinamic<T>, UICollectionViewDataSource {
-
-    private var collectionView: UICollectionView
+    
     private var identifierCell: String
 
-    init(collectionView: UICollectionView,
-         identifierCell: CollectionViewCellIdentifier = .defaultCell) {
-        self.collectionView = collectionView
+    init(identifierCell: CollectionViewCellIdentifier = .defaultCell) {
         self.identifierCell = identifierCell.rawValue
     }
-
-    func setData(_ data: [T]) {
+    
+    func set(data:[T]) {
         self.data = DynamicValue(data)
-        collectionView.reloadData()
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {

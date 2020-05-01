@@ -38,6 +38,7 @@
 		D13AE66C245C911E00E4F067 /* SectionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */; };
 		D13AE66E245C91A100E4F067 /* CollectionViewCellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66D245C91A100E4F067 /* CollectionViewCellIdentifier.swift */; };
 		D13AE670245C953600E4F067 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66F245C953600E4F067 /* HomeContract.swift */; };
+		D13AE672245C9A0500E4F067 /* CollectionDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE671245C9A0500E4F067 /* CollectionDisplay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCollectionCell.swift; sourceTree = "<group>"; };
 		D13AE66D245C91A100E4F067 /* CollectionViewCellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellIdentifier.swift; sourceTree = "<group>"; };
 		D13AE66F245C953600E4F067 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
+		D13AE671245C9A0500E4F067 /* CollectionDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDisplay.swift; sourceTree = "<group>"; };
 		ECEF3FB91D2B95F8F73C531F /* Pods-Bitmall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitmall.debug.xcconfig"; path = "Target Support Files/Pods-Bitmall/Pods-Bitmall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +274,7 @@
 				D13AE663245C8E8800E4F067 /* DynamicValue.swift */,
 				D13AE665245C8F4700E4F067 /* GenericDinamic.swift */,
 				D13AE66D245C91A100E4F067 /* CollectionViewCellIdentifier.swift */,
+				D13AE671245C9A0500E4F067 /* CollectionDisplay.swift */,
 			);
 			path = CollectionCustom;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				D13AE670245C953600E4F067 /* HomeContract.swift in Sources */,
 				D13AE652245C7CFA00E4F067 /* BasePresenter.swift in Sources */,
 				D13AE654245C7D0700E4F067 /* ViewType.swift in Sources */,
+				D13AE672245C9A0500E4F067 /* CollectionDisplay.swift in Sources */,
 				D13AE65B245C803100E4F067 /* UINavigationContoller+LargeTitle.swift in Sources */,
 				D13AE658245C7D9700E4F067 /* HomePresenter.swift in Sources */,
 				D13AE612245C733400E4F067 /* AppDelegate.swift in Sources */,

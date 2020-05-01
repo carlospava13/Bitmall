@@ -10,34 +10,47 @@ import UIKit
 
 final class HomeViewController: BaseViewController {
 
-    var scrollView: UIScrollView = {
+    weak var delegate: HomeViewControllerDelegate?
+
+    //MARK: Views
+    lazy var scrollView: UIScrollView = {
         var scrollView = UIScrollView(frame: .zero)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.backgroundColor = .white
+        scrollView.backgroundColor = .red
         return scrollView
     }()
-    
-    var collectionView: UICollectionView = {
-        var collectionView = UICollectionView()
+
+    private lazy var collectionView: UICollectionView = {
+        let flowLayout = CollectionViewHorizontalCustom(display: .inline)
+        var collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.isPagingEnabled = true
-        collectionView.collectionViewLayout = CollectionViewHorizontalCustom()
+        collectionView.backgroundColor = .red
         return collectionView
     }()
     
-    var collectionAdapter: HomeCollectionAdapter?
-    weak var delegate: HomeViewControllerDelegate?
-    var ownPresenter: HomePresenterType {
-        return presenter as! HomePresenterType
+//    private lazy var viewCon: UIView = {
+//        var view = UIView(frame: .zero)
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        view.backgroundColor = .blue
+//        return view
+//    }()
+
+    //MARK: Adapter
+    private var collectionAdapter: HomeCollectionAdapter!
+
+    //MARK: Presenter
+    private var ownPresenter: HomePresenterType! {
+        return presenter as? HomePresenterType
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ownPresenter.bind(self)
         setupNavigationTitle()
         setupNagivationItem()
         setupCollectionView()
     }
-    
+
     func setupNavigationTitle() {
         navigationController?.setupLargeTitle("Home")
     }
@@ -50,29 +63,51 @@ final class HomeViewController: BaseViewController {
         let barButton = UIBarButtonItem(customView: button)
         self.navigationItem.rightBarButtonItem = barButton
     }
-    
+
     override func setupViews() {
-        view.addSubview(scrollView)
-        scrollView.addSubview(collectionView)
+        //view.addSubview(scrollView)
+        view.addSubview(collectionView)
+        //view.addSubview(viewCon)
     }
 
     override func setConstraints() {
         let constraints: [NSLayoutConstraint] = [
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+//            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+//            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+//            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor,constant: 64),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: 100)
+
         ]
         NSLayoutConstraint.activate(constraints)
+        view.layoutIfNeeded()
     }
-    
+
     private func setupCollectionView() {
-        collectionAdapter = HomeCollectionAdapter(collectionView: collectionView, identifierCell: .sectionCollectionCell)
+        let identifierCell = CollectionViewCellIdentifier.sectionCollectionCell
+        collectionView.register(SectionCollectionCell.self, forCellWithReuseIdentifier: identifierCell.rawValue)
+        collectionAdapter = HomeCollectionAdapter(identifierCell: .sectionCollectionCell)
         collectionView.dataSource = collectionAdapter
+        collectionAdapter.data.addAndNotify(observer: self, completionHandler: { [weak self] in
+            self?.collectionView.reloadData()
+        })
+        
     }
 
     @objc func touchStartButton(_ button: UIButton) {
-        delegate?.nextPage()
+       // delegate?.nextPage()
+        ownPresenter.getHomeModel()
+    }
+}
+
+extension HomeViewController: HomeView {
+    func setHomeModels(_ models: [HomeModel]) {
+       // collectionAdapter.set(data: models)
+        collectionAdapter?.data.value = models
     }
 }
 
