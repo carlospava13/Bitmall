@@ -18,6 +18,12 @@
 		D13AE61E245C733700E4F067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13AE61C245C733700E4F067 /* LaunchScreen.storyboard */; };
 		D13AE629245C733700E4F067 /* BitmallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE628245C733700E4F067 /* BitmallTests.swift */; };
 		D13AE634245C733700E4F067 /* BitmallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE633245C733700E4F067 /* BitmallUITests.swift */; };
+		D13AE643245C742000E4F067 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE642245C742000E4F067 /* BaseViewController.swift */; };
+		D13AE646245C74E000E4F067 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE645245C74E000E4F067 /* CoordinatorType.swift */; };
+		D13AE648245C753D00E4F067 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE647245C753D00E4F067 /* HomeCoordinator.swift */; };
+		D13AE64A245C759E00E4F067 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE649245C759E00E4F067 /* HomeViewController.swift */; };
+		D13AE64C245C765900E4F067 /* HomeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE64B245C765900E4F067 /* HomeViewControllerDelegate.swift */; };
+		D13AE64F245C778F00E4F067 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE64E245C778F00E4F067 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,12 @@
 		D13AE62F245C733700E4F067 /* BitmallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitmallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13AE633245C733700E4F067 /* BitmallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmallUITests.swift; sourceTree = "<group>"; };
 		D13AE635245C733700E4F067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D13AE642245C742000E4F067 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D13AE645245C74E000E4F067 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		D13AE647245C753D00E4F067 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		D13AE649245C759E00E4F067 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D13AE64B245C765900E4F067 /* HomeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerDelegate.swift; sourceTree = "<group>"; };
+		D13AE64E245C778F00E4F067 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		ECEF3FB91D2B95F8F73C531F /* Pods-Bitmall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitmall.debug.xcconfig"; path = "Target Support Files/Pods-Bitmall/Pods-Bitmall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +123,6 @@
 				363D7DA44869A3707FE8F42B /* Pods-BitmallTests.debug.xcconfig */,
 				8F5ABA168970A3253DBAE8DB /* Pods-BitmallTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +151,9 @@
 		D13AE610245C733400E4F067 /* Bitmall */ = {
 			isa = PBXGroup;
 			children = (
+				D13AE64D245C778300E4F067 /* Main */,
+				D13AE644245C74C900E4F067 /* Coordinator */,
+				D13AE641245C740300E4F067 /* Home */,
 				D13AE611245C733400E4F067 /* AppDelegate.swift */,
 				D13AE613245C733400E4F067 /* SceneDelegate.swift */,
 				D13AE615245C733400E4F067 /* ViewController.swift */,
@@ -147,6 +161,7 @@
 				D13AE61A245C733700E4F067 /* Assets.xcassets */,
 				D13AE61C245C733700E4F067 /* LaunchScreen.storyboard */,
 				D13AE61F245C733700E4F067 /* Info.plist */,
+				D13AE642245C742000E4F067 /* BaseViewController.swift */,
 			);
 			path = Bitmall;
 			sourceTree = "<group>";
@@ -167,6 +182,32 @@
 				D13AE635245C733700E4F067 /* Info.plist */,
 			);
 			path = BitmallUITests;
+			sourceTree = "<group>";
+		};
+		D13AE641245C740300E4F067 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D13AE647245C753D00E4F067 /* HomeCoordinator.swift */,
+				D13AE649245C759E00E4F067 /* HomeViewController.swift */,
+				D13AE64B245C765900E4F067 /* HomeViewControllerDelegate.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D13AE644245C74C900E4F067 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D13AE645245C74E000E4F067 /* CoordinatorType.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D13AE64D245C778300E4F067 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D13AE64E245C778F00E4F067 /* MainCoordinator.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,8 +414,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D13AE616245C733400E4F067 /* ViewController.swift in Sources */,
+				D13AE643245C742000E4F067 /* BaseViewController.swift in Sources */,
 				D13AE612245C733400E4F067 /* AppDelegate.swift in Sources */,
 				D13AE614245C733400E4F067 /* SceneDelegate.swift in Sources */,
+				D13AE64C245C765900E4F067 /* HomeViewControllerDelegate.swift in Sources */,
+				D13AE646245C74E000E4F067 /* CoordinatorType.swift in Sources */,
+				D13AE64A245C759E00E4F067 /* HomeViewController.swift in Sources */,
+				D13AE64F245C778F00E4F067 /* MainCoordinator.swift in Sources */,
+				D13AE648245C753D00E4F067 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
