@@ -8,10 +8,11 @@
 
 import Foundation
 
-protocol HomePresenterType: PresenterType {
+protocol HomePresenterType: PresenterType, HomeCollectionAdapterType {
     func getHomeModel()
 }
 
 protocol HomeView: ViewType {
     func setHomeModels(_ models: [HomeModel])
+    func updateItem(_ state: Bool, row: Int)
 }

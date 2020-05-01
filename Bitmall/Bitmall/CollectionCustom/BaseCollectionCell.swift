@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseCollectionCell: UICollectionViewCell {
+class BaseCollectionCell<T>: UICollectionViewCell {
     
     var identifier: CollectionViewCellIdentifier = .defaultCell
     
@@ -24,7 +24,5 @@ class BaseCollectionCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setData<T>(_ data: T) {
-        
-    }
+    func setData(_ data: T) { }
 }

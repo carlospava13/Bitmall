@@ -16,7 +16,6 @@ final class HomeViewController: BaseViewController {
     lazy var scrollView: UIScrollView = {
         var scrollView = UIScrollView(frame: .zero)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.backgroundColor = .red
         return scrollView
     }()
 
@@ -24,8 +23,6 @@ final class HomeViewController: BaseViewController {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.backgroundColor = .green
-        stackView.tintColor = .green
         return stackView
     }()
 
@@ -33,8 +30,9 @@ final class HomeViewController: BaseViewController {
         let flowLayout = CollectionViewHorizontalCustom(display: .inline)
         var collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .blue
         collectionView.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        collectionView.backgroundColor = .white
+        collectionView.indicatorStyle = .white
         return collectionView
     }()
 
@@ -52,6 +50,12 @@ final class HomeViewController: BaseViewController {
         setupNavigationTitle()
         setupNagivationItem()
         setupCollectionView()
+        ownPresenter.getHomeModel()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showCollectionViewWithAnimation()
     }
 
     func setupNavigationTitle() {
@@ -110,20 +114,48 @@ final class HomeViewController: BaseViewController {
         collectionView.register(SectionCollectionCell.self, forCellWithReuseIdentifier: identifierCell.rawValue)
         collectionAdapter = HomeCollectionAdapter(identifierCell: .sectionCollectionCell)
         collectionView.dataSource = collectionAdapter
+        collectionView.delegate = collectionAdapter
         collectionAdapter.data.addAndNotify(observer: self, completionHandler: { [weak self] in
             self?.collectionView.reloadData()
         })
-
+        collectionAdapter.delegate = ownPresenter
     }
 
     @objc func touchStartButton(_ button: UIButton) {
         ownPresenter.getHomeModel()
     }
+
+    private func showCollectionViewWithAnimation() {
+        animateCollectionView(lastPositionX: 0,
+            newPositionX: collectionView.frame.width)
+    }
+
+    private func hideCollectionViewWithAnimation() {
+        animateCollectionView(lastPositionX: collectionView.frame.width,
+            newPositionX: 0)
+    }
+
+    private func animateCollectionView(lastPositionX: CGFloat, newPositionX: CGFloat) {
+        collectionView.layoutIfNeeded()
+        collectionView.frame.origin.x += newPositionX
+        UIView.animate(withDuration: 0.8) {
+            self.collectionView.frame.origin.x = lastPositionX
+        }
+    }
 }
 
 extension HomeViewController: HomeView {
+
     func setHomeModels(_ models: [HomeModel]) {
         collectionAdapter?.data.value = models
+    }
+
+    func updateItem(_ state: Bool, row: Int) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.collectionAdapter.data.value[row].selected = state
+        }) { (finished) in
+            self.hideCollectionViewWithAnimation()
+        }
     }
 }
 

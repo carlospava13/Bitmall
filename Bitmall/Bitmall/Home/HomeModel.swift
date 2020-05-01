@@ -11,4 +11,5 @@ import UIKit
 struct HomeModel {
     let title: String
     let icon: UIImage?
+    var selected: Bool = false
 }

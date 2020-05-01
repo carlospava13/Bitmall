@@ -8,14 +8,14 @@
 
 import UIKit
 
-class GenericDataSource<Cell:BaseCollectionCell, T>: GenericDinamic<T>, UICollectionViewDataSource {
-    
+class GenericDataSource<Cell:BaseCollectionCell<T>, T>: GenericDinamic<T>, UICollectionViewDataSource, UICollectionViewDelegate {
+
     private var identifierCell: String
 
     init(identifierCell: CollectionViewCellIdentifier = .defaultCell) {
         self.identifierCell = identifierCell.rawValue
     }
-    
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -26,7 +26,13 @@ class GenericDataSource<Cell:BaseCollectionCell, T>: GenericDinamic<T>, UICollec
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifierCell, for: indexPath) as! Cell
-        cell.setData(data.value[indexPath.section])
+        cell.setData(data.value[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) { }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) { }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) { }
 }
