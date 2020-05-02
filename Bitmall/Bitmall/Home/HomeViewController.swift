@@ -27,22 +27,12 @@ final class HomeViewController: BaseViewController {
         return stackView
     }()
 
-    private lazy var collectionView: UICollectionView = {
-        let flowLayout = CollectionViewHorizontalCustom(display: .inline)
-        var collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        collectionView.backgroundColor = .white
-        collectionView.indicatorStyle = .white
-        return collectionView
+    private lazy var sectionCollection: SectionCollection = {
+        return SectionCollection(frame: .zero, layout: .inline)
     }()
 
-    private lazy var tableView: UICollectionView = {
-        let flowLayout = CollectionViewHorizontalCustom(display: .list)
-        var collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .white
-        return collectionView
+    private lazy var tableView: CollectionView = {
+        return CollectionView(frame: .zero, layout: .list)
     }()
 
     //MARK: Adapter
@@ -71,7 +61,7 @@ final class HomeViewController: BaseViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showCollectionViewWithAnimation()
+        sectionCollection.showCollectionViewWithAnimation()
     }
 
     private func setupNavigationTitle() {
@@ -110,7 +100,7 @@ final class HomeViewController: BaseViewController {
     private func setupStackViewConstraints() {
         scrollView.addSubview(stackView)
         let constraints: [NSLayoutConstraint] = [
-            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 8),
             stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
@@ -122,19 +112,18 @@ final class HomeViewController: BaseViewController {
     }
 
     private func arrangeViews() {
-        stackView.addArrangedSubview(collectionView)
+        stackView.addArrangedSubview(sectionCollection)
         stackView.addArrangedSubview(tableView)
         view.layoutIfNeeded()
     }
 
     private func setupCollectionView() {
         let identifierCell = CollectionViewCellIdentifier.sectionCollectionCell
-        collectionView.register(SectionCollectionCell.self, forCellWithReuseIdentifier: identifierCell.rawValue)
+        sectionCollection.register(SectionCollectionCell.self, forCellWithReuseIdentifier: identifierCell.rawValue)
         collectionAdapter = HomeCollectionAdapter(identifierCell: .sectionCollectionCell)
-        collectionView.dataSource = collectionAdapter
-        collectionView.delegate = collectionAdapter
+        sectionCollection.setAdapter(collectionAdapter)
         collectionAdapter.data.addAndNotify(observer: self, completionHandler: { [weak self] in
-            self?.collectionView.reloadData()
+            self?.sectionCollection.reloadData()
         })
         collectionAdapter.delegate = ownPresenter
     }
@@ -168,24 +157,6 @@ final class HomeViewController: BaseViewController {
     @objc func touchStartButton(button: UIButton) {
         delegate?.nextPage()
     }
-
-    private func showCollectionViewWithAnimation() {
-        animateCollectionView(lastPositionX: 0,
-            newPositionX: collectionView.frame.width)
-    }
-
-    private func hideCollectionViewWithAnimation() {
-        animateCollectionView(lastPositionX: collectionView.frame.width,
-            newPositionX: 0)
-    }
-
-    private func animateCollectionView(lastPositionX: CGFloat, newPositionX: CGFloat) {
-        collectionView.layoutIfNeeded()
-        collectionView.frame.origin.x += newPositionX
-        UIView.animate(withDuration: 1.5) {
-            self.collectionView.frame.origin.x = lastPositionX
-        }
-    }
 }
 
 extension HomeViewController: HomeView {
@@ -202,7 +173,7 @@ extension HomeViewController: HomeView {
         UIView.animate(withDuration: 0.5, animations: {
             self.collectionAdapter.data.value[row].selected = state
         }) { (finished) in
-            self.hideCollectionViewWithAnimation()
+            self.sectionCollection.hideCollectionViewWithAnimation()
         }
     }
 
@@ -211,11 +182,11 @@ extension HomeViewController: HomeView {
     }
 
     func showSkeleton() {
-        collectionView.superview?.showSkeleton()
+        sectionCollection.superview?.showSkeleton()
     }
 
     func hideSkeleton() {
-        collectionView.superview?.hideSkeleton()
+        sectionCollection.superview?.hideSkeleton()
     }
 }
 

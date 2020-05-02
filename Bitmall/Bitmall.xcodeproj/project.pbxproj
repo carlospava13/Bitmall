@@ -41,6 +41,8 @@
 		D16B8E1A245DC4D200619126 /* HomeTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B8E0F245DC16E00619126 /* HomeTableAdapter.swift */; };
 		D16B8E29245DD7E000619126 /* BitmallData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16B8E28245DD7E000619126 /* BitmallData.framework */; };
 		D16B8E2A245DD7E000619126 /* BitmallData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D16B8E28245DD7E000619126 /* BitmallData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D16B8E2D245DDE5200619126 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B8E2C245DDE5200619126 /* CollectionView.swift */; };
+		D16B8E30245DE13600619126 /* SectionCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B8E2F245DE13600619126 /* SectionCollection.swift */; };
 		D1E9963B245D106700F68C85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1E9963A245D106700F68C85 /* GoogleService-Info.plist */; };
 		D1E9963E245D14F100F68C85 /* FirebaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9963D245D14F100F68C85 /* FirebaseApiClient.swift */; };
 		D1E99640245D1F7F00F68C85 /* UIView+Skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9963F245D1F7F00F68C85 /* UIView+Skeleton.swift */; };
@@ -122,6 +124,8 @@
 		D16B8E0F245DC16E00619126 /* HomeTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableAdapter.swift; sourceTree = "<group>"; };
 		D16B8E11245DC1AC00619126 /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
 		D16B8E28245DD7E000619126 /* BitmallData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitmallData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D16B8E2C245DDE5200619126 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		D16B8E2F245DE13600619126 /* SectionCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCollection.swift; sourceTree = "<group>"; };
 		D1E9962A245D046300F68C85 /* BitmallData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitmallData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E9963A245D106700F68C85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1E9963D245D14F100F68C85 /* FirebaseApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseApiClient.swift; sourceTree = "<group>"; };
@@ -295,13 +299,8 @@
 		D13AE65C245C88E800E4F067 /* CollectionCustom */ = {
 			isa = PBXGroup;
 			children = (
-				D13AE65D245C890200E4F067 /* CollectionCustom.swift */,
-				D13AE65F245C8A9200E4F067 /* GenericDataSource.swift */,
-				D13AE661245C8AA700E4F067 /* BaseCollectionCell.swift */,
-				D13AE663245C8E8800E4F067 /* DynamicValue.swift */,
-				D13AE665245C8F4700E4F067 /* GenericDinamic.swift */,
-				D13AE66D245C91A100E4F067 /* CollectionViewCellIdentifier.swift */,
-				D13AE671245C9A0500E4F067 /* CollectionDisplay.swift */,
+				D16B8E2E245DE11B00619126 /* Base */,
+				D16B8E2F245DE13600619126 /* SectionCollection.swift */,
 			);
 			path = CollectionCustom;
 			sourceTree = "<group>";
@@ -323,6 +322,21 @@
 				D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		D16B8E2E245DE11B00619126 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D13AE65D245C890200E4F067 /* CollectionCustom.swift */,
+				D13AE65F245C8A9200E4F067 /* GenericDataSource.swift */,
+				D13AE661245C8AA700E4F067 /* BaseCollectionCell.swift */,
+				D13AE663245C8E8800E4F067 /* DynamicValue.swift */,
+				D13AE665245C8F4700E4F067 /* GenericDinamic.swift */,
+				D13AE66D245C91A100E4F067 /* CollectionViewCellIdentifier.swift */,
+				D13AE671245C9A0500E4F067 /* CollectionDisplay.swift */,
+				D16B8E2C245DDE5200619126 /* CollectionView.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		D1E9963C245D14B800F68C85 /* FirebaseApi */ = {
@@ -575,6 +589,7 @@
 			files = (
 				D13AE643245C742000E4F067 /* BaseViewController.swift in Sources */,
 				D13AE670245C953600E4F067 /* HomeContract.swift in Sources */,
+				D16B8E2D245DDE5200619126 /* CollectionView.swift in Sources */,
 				D13AE652245C7CFA00E4F067 /* BasePresenter.swift in Sources */,
 				D13AE654245C7D0700E4F067 /* ViewType.swift in Sources */,
 				D13AE672245C9A0500E4F067 /* CollectionDisplay.swift in Sources */,
@@ -596,6 +611,7 @@
 				D13AE660245C8A9200E4F067 /* GenericDataSource.swift in Sources */,
 				D13AE646245C74E000E4F067 /* CoordinatorType.swift in Sources */,
 				D13AE64A245C759E00E4F067 /* HomeViewController.swift in Sources */,
+				D16B8E30245DE13600619126 /* SectionCollection.swift in Sources */,
 				D13AE64F245C778F00E4F067 /* MainCoordinator.swift in Sources */,
 				D13AE648245C753D00E4F067 /* HomeCoordinator.swift in Sources */,
 				D16B8E1A245DC4D200619126 /* HomeTableAdapter.swift in Sources */,

@@ -50,23 +50,12 @@ final class SectionCollectionCell: BaseCollectionCell<HomeModel> {
     func setContainerViewConstraints() {
         let constraints = [
             containerView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ]
         NSLayoutConstraint.activate(constraints)
         containerView.layoutIfNeeded()
-    }
-
-    func setConstraint() {
-        containerView.addSubview(titleLabel)
-        let constraints = [
-            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            titleLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
-        ]
-        NSLayoutConstraint.activate(constraints)
     }
 
     func setImageConstraints() {
@@ -80,6 +69,17 @@ final class SectionCollectionCell: BaseCollectionCell<HomeModel> {
         ]
         NSLayoutConstraint.activate(constraints)
     }
+    
+    func setConstraint() {
+          containerView.addSubview(titleLabel)
+          let constraints = [
+              titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
+              titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+              titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+              titleLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 8)
+          ]
+          NSLayoutConstraint.activate(constraints)
+      }
 
     override func setData(_ data: HomeModel) {
         titleLabel.text = data.title
@@ -89,7 +89,7 @@ final class SectionCollectionCell: BaseCollectionCell<HomeModel> {
     }
 
     func changeBackground(_ data: HomeModel) {
-        let color: UIColor = data.selected ? .red : .white
-        imageView.backgroundColor = color
+//        let color: UIColor = data.selected ? .red : .white
+//        imageView.backgroundColor = color
     }
 }
