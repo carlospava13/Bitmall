@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BitmallData
 
 final class SectionCollectionCell: BaseCollectionCell<HomeModel> {
 
@@ -69,7 +70,7 @@ final class SectionCollectionCell: BaseCollectionCell<HomeModel> {
 
     override func setData(_ data: HomeModel) {
         titleLabel.text = data.title
-        imageView.image = data.icon
+       // imageView.image = data.
     }
 
     func changeBackground(_ data: HomeModel) {

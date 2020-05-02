@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BitmallData
 
 protocol HomePresenterType: PresenterType, HomeCollectionAdapterType {
     func getHomeModel()
@@ -15,4 +16,5 @@ protocol HomePresenterType: PresenterType, HomeCollectionAdapterType {
 protocol HomeView: ViewType {
     func setHomeModels(_ models: [HomeModel])
     func updateItem(_ state: Bool, row: Int)
+    func showError(_ error: Error)
 }

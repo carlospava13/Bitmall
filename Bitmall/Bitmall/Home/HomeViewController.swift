@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BitmallData
 
 final class HomeViewController: BaseViewController {
 
@@ -50,7 +51,7 @@ final class HomeViewController: BaseViewController {
         setupNavigationTitle()
         setupNagivationItem()
         setupCollectionView()
-        ownPresenter.getHomeModel()
+        //ownPresenter.getHomeModel()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -145,9 +146,13 @@ final class HomeViewController: BaseViewController {
 }
 
 extension HomeViewController: HomeView {
-
+    
     func setHomeModels(_ models: [HomeModel]) {
         collectionAdapter?.data.value = models
+    }
+    
+    func showError(_ error: Error) {
+        print(error)
     }
 
     func updateItem(_ state: Bool, row: Int) {

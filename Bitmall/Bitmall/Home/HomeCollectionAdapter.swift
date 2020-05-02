@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BitmallData
 
 protocol HomeCollectionAdapterType: AnyObject {
     func selectedItem(_ item: HomeModel, row: Int)

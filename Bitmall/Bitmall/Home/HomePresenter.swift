@@ -7,37 +7,36 @@
 //
 
 import UIKit
+import BitmallData
+import Firebase
 
 final class HomePresenter: BasePresenter, HomePresenterType {
 
+    var worker: HomeWorker!
+    
     var ownView: HomeView {
         return view as! HomeView
     }
+    
+    override init() {
+        super.init()
+        let firebase: FirebaseApiClient<HomeApiModel> = FirebaseApiClient()
+        worker = HomeWorker(repository: HomeRepository(apiClient: firebase))
+    }
 
     func getHomeModel() {
-        let models = [
-            HomeModel(title: "Home1", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home2", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home3", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home4", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home5", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home6", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home7", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home8", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home9", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home10", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home11", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home12", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home13", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home14", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home15", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home16", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home17", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home18", icon: UIImage(named: "starIcon")),
-            HomeModel(title: "Home19", icon: UIImage(named: "starIcon")),
-        ]
-
-        ownView.setHomeModels(models)
+        worker.buildCase { (result) in
+            switch result {
+            case .success(let models):
+                self.ownView.setHomeModels(models)
+            case .failure(let error):
+                self.ownView.showError(error)
+            }
+        }
+    }
+    
+    func getHome() {
+        
     }
 }
 

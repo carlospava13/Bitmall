@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,11 +34,14 @@
 		D13AE664245C8E8800E4F067 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE663245C8E8800E4F067 /* DynamicValue.swift */; };
 		D13AE666245C8F4700E4F067 /* GenericDinamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE665245C8F4700E4F067 /* GenericDinamic.swift */; };
 		D13AE668245C90AA00E4F067 /* HomeCollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE667245C90AA00E4F067 /* HomeCollectionAdapter.swift */; };
-		D13AE66A245C90CD00E4F067 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE669245C90CD00E4F067 /* HomeModel.swift */; };
 		D13AE66C245C911E00E4F067 /* SectionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */; };
 		D13AE66E245C91A100E4F067 /* CollectionViewCellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66D245C91A100E4F067 /* CollectionViewCellIdentifier.swift */; };
 		D13AE670245C953600E4F067 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66F245C953600E4F067 /* HomeContract.swift */; };
 		D13AE672245C9A0500E4F067 /* CollectionDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE671245C9A0500E4F067 /* CollectionDisplay.swift */; };
+		D1E9962B245D046300F68C85 /* BitmallData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E9962A245D046300F68C85 /* BitmallData.framework */; };
+		D1E9962C245D046300F68C85 /* BitmallData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1E9962A245D046300F68C85 /* BitmallData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1E9963B245D106700F68C85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1E9963A245D106700F68C85 /* GoogleService-Info.plist */; };
+		D1E9963E245D14F100F68C85 /* FirebaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9963D245D14F100F68C85 /* FirebaseApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,20 @@
 			remoteInfo = Bitmall;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D1E9962D245D046300F68C85 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D1E9962C245D046300F68C85 /* BitmallData.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		363D7DA44869A3707FE8F42B /* Pods-BitmallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitmallTests.debug.xcconfig"; path = "Target Support Files/Pods-BitmallTests/Pods-BitmallTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,11 +114,13 @@
 		D13AE663245C8E8800E4F067 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
 		D13AE665245C8F4700E4F067 /* GenericDinamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDinamic.swift; sourceTree = "<group>"; };
 		D13AE667245C90AA00E4F067 /* HomeCollectionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionAdapter.swift; sourceTree = "<group>"; };
-		D13AE669245C90CD00E4F067 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCollectionCell.swift; sourceTree = "<group>"; };
 		D13AE66D245C91A100E4F067 /* CollectionViewCellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellIdentifier.swift; sourceTree = "<group>"; };
 		D13AE66F245C953600E4F067 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
 		D13AE671245C9A0500E4F067 /* CollectionDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDisplay.swift; sourceTree = "<group>"; };
+		D1E9962A245D046300F68C85 /* BitmallData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitmallData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1E9963A245D106700F68C85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D1E9963D245D14F100F68C85 /* FirebaseApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseApiClient.swift; sourceTree = "<group>"; };
 		ECEF3FB91D2B95F8F73C531F /* Pods-Bitmall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitmall.debug.xcconfig"; path = "Target Support Files/Pods-Bitmall/Pods-Bitmall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1E9962B245D046300F68C85 /* BitmallData.framework in Frameworks */,
 				9508925CBDC8C9125E4FC327 /* Pods_Bitmall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +156,7 @@
 		0931E863FF4338AD131FD422 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D1E9962A245D046300F68C85 /* BitmallData.framework */,
 				490B2C3E4B4D348C8937D424 /* Pods_Bitmall.framework */,
 				40D8558CED2E4584228B74C6 /* Pods_Bitmall_BitmallUITests.framework */,
 				8F78F9FAACDA7271C627F85C /* Pods_BitmallTests.framework */,
@@ -181,8 +202,10 @@
 		D13AE610245C733400E4F067 /* Bitmall */ = {
 			isa = PBXGroup;
 			children = (
+				D1E9963C245D14B800F68C85 /* FirebaseApi */,
 				D13AE65C245C88E800E4F067 /* CollectionCustom */,
 				D13AE61F245C733700E4F067 /* Info.plist */,
+				D1E9963A245D106700F68C85 /* GoogleService-Info.plist */,
 				D13AE611245C733400E4F067 /* AppDelegate.swift */,
 				D13AE613245C733400E4F067 /* SceneDelegate.swift */,
 				D13AE61A245C733700E4F067 /* Assets.xcassets */,
@@ -223,7 +246,6 @@
 				D13AE64B245C765900E4F067 /* HomeViewControllerDelegate.swift */,
 				D13AE657245C7D9700E4F067 /* HomePresenter.swift */,
 				D13AE667245C90AA00E4F067 /* HomeCollectionAdapter.swift */,
-				D13AE669245C90CD00E4F067 /* HomeModel.swift */,
 				D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */,
 				D13AE66F245C953600E4F067 /* HomeContract.swift */,
 			);
@@ -279,6 +301,14 @@
 			path = CollectionCustom;
 			sourceTree = "<group>";
 		};
+		D1E9963C245D14B800F68C85 /* FirebaseApi */ = {
+			isa = PBXGroup;
+			children = (
+				D1E9963D245D14F100F68C85 /* FirebaseApiClient.swift */,
+			);
+			path = FirebaseApi;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,6 +320,8 @@
 				D13AE60A245C733400E4F067 /* Sources */,
 				D13AE60B245C733400E4F067 /* Frameworks */,
 				D13AE60C245C733400E4F067 /* Resources */,
+				747F86D831D2689AB98C5D3A /* [CP] Embed Pods Frameworks */,
+				D1E9962D245D046300F68C85 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -327,6 +359,7 @@
 				D13AE62B245C733700E4F067 /* Sources */,
 				D13AE62C245C733700E4F067 /* Frameworks */,
 				D13AE62D245C733700E4F067 /* Resources */,
+				25050FB14B823ECAE9B6B96D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -387,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D13AE61E245C733700E4F067 /* LaunchScreen.storyboard in Resources */,
+				D1E9963B245D106700F68C85 /* GoogleService-Info.plist in Resources */,
 				D13AE61B245C733700E4F067 /* Assets.xcassets in Resources */,
 				D13AE619245C733400E4F067 /* Main.storyboard in Resources */,
 			);
@@ -409,6 +443,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		25050FB14B823ECAE9B6B96D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bitmall-BitmallUITests/Pods-Bitmall-BitmallUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bitmall-BitmallUITests/Pods-Bitmall-BitmallUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bitmall-BitmallUITests/Pods-Bitmall-BitmallUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		747F86D831D2689AB98C5D3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bitmall/Pods-Bitmall-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bitmall/Pods-Bitmall-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bitmall/Pods-Bitmall-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7D25F9012247A9DD7B0A7DEA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,8 +561,8 @@
 				D13AE66E245C91A100E4F067 /* CollectionViewCellIdentifier.swift in Sources */,
 				D13AE668245C90AA00E4F067 /* HomeCollectionAdapter.swift in Sources */,
 				D13AE614245C733400E4F067 /* SceneDelegate.swift in Sources */,
-				D13AE66A245C90CD00E4F067 /* HomeModel.swift in Sources */,
 				D13AE656245C7D1600E4F067 /* PresenterType.swift in Sources */,
+				D1E9963E245D14F100F68C85 /* FirebaseApiClient.swift in Sources */,
 				D13AE65E245C890200E4F067 /* CollectionCustom.swift in Sources */,
 				D13AE666245C8F4700E4F067 /* GenericDinamic.swift in Sources */,
 				D13AE64C245C765900E4F067 /* HomeViewControllerDelegate.swift in Sources */,
@@ -686,7 +754,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fastlane.Bitmall;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Bitmall.Bitmall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -705,7 +773,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fastlane.Bitmall;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Bitmall.Bitmall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
