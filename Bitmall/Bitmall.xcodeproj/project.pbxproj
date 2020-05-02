@@ -12,7 +12,6 @@
 		9508925CBDC8C9125E4FC327 /* Pods_Bitmall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490B2C3E4B4D348C8937D424 /* Pods_Bitmall.framework */; };
 		D13AE612245C733400E4F067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE611245C733400E4F067 /* AppDelegate.swift */; };
 		D13AE614245C733400E4F067 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE613245C733400E4F067 /* SceneDelegate.swift */; };
-		D13AE619245C733400E4F067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13AE617245C733400E4F067 /* Main.storyboard */; };
 		D13AE61B245C733700E4F067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13AE61A245C733700E4F067 /* Assets.xcassets */; };
 		D13AE61E245C733700E4F067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13AE61C245C733700E4F067 /* LaunchScreen.storyboard */; };
 		D13AE629245C733700E4F067 /* BitmallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE628245C733700E4F067 /* BitmallTests.swift */; };
@@ -33,15 +32,18 @@
 		D13AE662245C8AA700E4F067 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE661245C8AA700E4F067 /* BaseCollectionCell.swift */; };
 		D13AE664245C8E8800E4F067 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE663245C8E8800E4F067 /* DynamicValue.swift */; };
 		D13AE666245C8F4700E4F067 /* GenericDinamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE665245C8F4700E4F067 /* GenericDinamic.swift */; };
-		D13AE668245C90AA00E4F067 /* HomeCollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE667245C90AA00E4F067 /* HomeCollectionAdapter.swift */; };
-		D13AE66C245C911E00E4F067 /* SectionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */; };
 		D13AE66E245C91A100E4F067 /* CollectionViewCellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66D245C91A100E4F067 /* CollectionViewCellIdentifier.swift */; };
 		D13AE670245C953600E4F067 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66F245C953600E4F067 /* HomeContract.swift */; };
 		D13AE672245C9A0500E4F067 /* CollectionDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE671245C9A0500E4F067 /* CollectionDisplay.swift */; };
+		D16B8E17245DC4BF00619126 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B8E11245DC1AC00619126 /* HomeTableCell.swift */; };
+		D16B8E18245DC4C600619126 /* SectionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */; };
+		D16B8E19245DC4CC00619126 /* HomeCollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE667245C90AA00E4F067 /* HomeCollectionAdapter.swift */; };
+		D16B8E1A245DC4D200619126 /* HomeTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B8E0F245DC16E00619126 /* HomeTableAdapter.swift */; };
 		D1E9962B245D046300F68C85 /* BitmallData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E9962A245D046300F68C85 /* BitmallData.framework */; };
 		D1E9962C245D046300F68C85 /* BitmallData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1E9962A245D046300F68C85 /* BitmallData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D1E9963B245D106700F68C85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1E9963A245D106700F68C85 /* GoogleService-Info.plist */; };
 		D1E9963E245D14F100F68C85 /* FirebaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9963D245D14F100F68C85 /* FirebaseApiClient.swift */; };
+		D1E99640245D1F7F00F68C85 /* UIView+Skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9963F245D1F7F00F68C85 /* UIView+Skeleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +89,6 @@
 		D13AE60E245C733400E4F067 /* Bitmall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitmall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13AE611245C733400E4F067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D13AE613245C733400E4F067 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D13AE618245C733400E4F067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D13AE61A245C733700E4F067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D13AE61D245C733700E4F067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D13AE61F245C733700E4F067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,9 +119,12 @@
 		D13AE66D245C91A100E4F067 /* CollectionViewCellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellIdentifier.swift; sourceTree = "<group>"; };
 		D13AE66F245C953600E4F067 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
 		D13AE671245C9A0500E4F067 /* CollectionDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDisplay.swift; sourceTree = "<group>"; };
+		D16B8E0F245DC16E00619126 /* HomeTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableAdapter.swift; sourceTree = "<group>"; };
+		D16B8E11245DC1AC00619126 /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
 		D1E9962A245D046300F68C85 /* BitmallData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitmallData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E9963A245D106700F68C85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1E9963D245D14F100F68C85 /* FirebaseApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseApiClient.swift; sourceTree = "<group>"; };
+		D1E9963F245D1F7F00F68C85 /* UIView+Skeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Skeleton.swift"; sourceTree = "<group>"; };
 		ECEF3FB91D2B95F8F73C531F /* Pods-Bitmall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitmall.debug.xcconfig"; path = "Target Support Files/Pods-Bitmall/Pods-Bitmall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,7 +219,6 @@
 				D13AE641245C740300E4F067 /* Home */,
 				D13AE61C245C733700E4F067 /* LaunchScreen.storyboard */,
 				D13AE64D245C778300E4F067 /* Main */,
-				D13AE617245C733400E4F067 /* Main.storyboard */,
 			);
 			path = Bitmall;
 			sourceTree = "<group>";
@@ -241,12 +244,11 @@
 		D13AE641245C740300E4F067 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D16B8E13245DC3AA00619126 /* Adapter */,
 				D13AE647245C753D00E4F067 /* HomeCoordinator.swift */,
 				D13AE649245C759E00E4F067 /* HomeViewController.swift */,
 				D13AE64B245C765900E4F067 /* HomeViewControllerDelegate.swift */,
 				D13AE657245C7D9700E4F067 /* HomePresenter.swift */,
-				D13AE667245C90AA00E4F067 /* HomeCollectionAdapter.swift */,
-				D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */,
 				D13AE66F245C953600E4F067 /* HomeContract.swift */,
 			);
 			path = Home;
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				D13AE65A245C803100E4F067 /* UINavigationContoller+LargeTitle.swift */,
+				D1E9963F245D1F7F00F68C85 /* UIView+Skeleton.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -299,6 +302,25 @@
 				D13AE671245C9A0500E4F067 /* CollectionDisplay.swift */,
 			);
 			path = CollectionCustom;
+			sourceTree = "<group>";
+		};
+		D16B8E13245DC3AA00619126 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				D16B8E14245DC3B700619126 /* Cell */,
+				D13AE667245C90AA00E4F067 /* HomeCollectionAdapter.swift */,
+				D16B8E0F245DC16E00619126 /* HomeTableAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		D16B8E14245DC3B700619126 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D16B8E11245DC1AC00619126 /* HomeTableCell.swift */,
+				D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D1E9963C245D14B800F68C85 /* FirebaseApi */ = {
@@ -422,7 +444,6 @@
 				D13AE61E245C733700E4F067 /* LaunchScreen.storyboard in Resources */,
 				D1E9963B245D106700F68C85 /* GoogleService-Info.plist in Resources */,
 				D13AE61B245C733700E4F067 /* Assets.xcassets in Resources */,
-				D13AE619245C733400E4F067 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,11 +576,12 @@
 				D13AE652245C7CFA00E4F067 /* BasePresenter.swift in Sources */,
 				D13AE654245C7D0700E4F067 /* ViewType.swift in Sources */,
 				D13AE672245C9A0500E4F067 /* CollectionDisplay.swift in Sources */,
+				D16B8E18245DC4C600619126 /* SectionCollectionCell.swift in Sources */,
 				D13AE65B245C803100E4F067 /* UINavigationContoller+LargeTitle.swift in Sources */,
 				D13AE658245C7D9700E4F067 /* HomePresenter.swift in Sources */,
 				D13AE612245C733400E4F067 /* AppDelegate.swift in Sources */,
+				D1E99640245D1F7F00F68C85 /* UIView+Skeleton.swift in Sources */,
 				D13AE66E245C91A100E4F067 /* CollectionViewCellIdentifier.swift in Sources */,
-				D13AE668245C90AA00E4F067 /* HomeCollectionAdapter.swift in Sources */,
 				D13AE614245C733400E4F067 /* SceneDelegate.swift in Sources */,
 				D13AE656245C7D1600E4F067 /* PresenterType.swift in Sources */,
 				D1E9963E245D14F100F68C85 /* FirebaseApiClient.swift in Sources */,
@@ -567,13 +589,15 @@
 				D13AE666245C8F4700E4F067 /* GenericDinamic.swift in Sources */,
 				D13AE64C245C765900E4F067 /* HomeViewControllerDelegate.swift in Sources */,
 				D13AE664245C8E8800E4F067 /* DynamicValue.swift in Sources */,
+				D16B8E19245DC4CC00619126 /* HomeCollectionAdapter.swift in Sources */,
 				D13AE662245C8AA700E4F067 /* BaseCollectionCell.swift in Sources */,
 				D13AE660245C8A9200E4F067 /* GenericDataSource.swift in Sources */,
 				D13AE646245C74E000E4F067 /* CoordinatorType.swift in Sources */,
 				D13AE64A245C759E00E4F067 /* HomeViewController.swift in Sources */,
 				D13AE64F245C778F00E4F067 /* MainCoordinator.swift in Sources */,
 				D13AE648245C753D00E4F067 /* HomeCoordinator.swift in Sources */,
-				D13AE66C245C911E00E4F067 /* SectionCollectionCell.swift in Sources */,
+				D16B8E1A245DC4D200619126 /* HomeTableAdapter.swift in Sources */,
+				D16B8E17245DC4BF00619126 /* HomeTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,14 +633,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D13AE617245C733400E4F067 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D13AE618245C733400E4F067 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D13AE61C245C733700E4F067 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

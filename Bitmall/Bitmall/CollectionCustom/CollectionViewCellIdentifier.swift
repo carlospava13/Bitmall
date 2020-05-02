@@ -10,5 +10,6 @@ import Foundation
 
 enum CollectionViewCellIdentifier: String {
     case sectionCollectionCell
+    case homeTableCell
     case defaultCell
 }

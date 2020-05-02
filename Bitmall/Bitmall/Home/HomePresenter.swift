@@ -25,18 +25,17 @@ final class HomePresenter: BasePresenter, HomePresenterType {
     }
 
     func getHomeModel() {
+        ownView.showSkeleton()
         worker.buildCase { (result) in
             switch result {
             case .success(let models):
                 self.ownView.setHomeModels(models)
+                self.ownView.setHomeModelsToTable(models)
             case .failure(let error):
                 self.ownView.showError(error)
             }
+            self.ownView.hideSkeleton()
         }
-    }
-    
-    func getHome() {
-        
     }
 }
 

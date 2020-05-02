@@ -12,6 +12,8 @@ target 'Bitmall' do
   # Pods for Bitmall
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'SDWebImage'
+  pod "SkeletonView"
   
   target 'BitmallData' do
     inherit! :search_paths

@@ -8,7 +8,7 @@
 
 import UIKit
 import BitmallData
-
+import SDWebImage
 final class SectionCollectionCell: BaseCollectionCell<HomeModel> {
 
     lazy var imageView: UIImageView = {
@@ -70,7 +70,9 @@ final class SectionCollectionCell: BaseCollectionCell<HomeModel> {
 
     override func setData(_ data: HomeModel) {
         titleLabel.text = data.title
-       // imageView.image = data.
+        if let imageUrl = data.imageUrl, let url = URL(string: imageUrl) {
+            imageView.sd_setImage(with: url, completed: nil)
+        }
     }
 
     func changeBackground(_ data: HomeModel) {

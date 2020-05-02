@@ -37,8 +37,21 @@ final class HomeViewController: BaseViewController {
         return collectionView
     }()
 
+    private lazy var tableView: UICollectionView = {
+        let flowLayout = CollectionViewHorizontalCustom(display: .list)
+        var collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .white
+        return collectionView
+    }()
+
     //MARK: Adapter
     private var collectionAdapter: HomeCollectionAdapter!
+    private var tableAdapter: HomeTableAdapter!
+
+    //MARK: Constraints
+
+    private var tableViewHeightConstraint: NSLayoutConstraint?
 
     //MARK: Presenter
     private var ownPresenter: HomePresenterType! {
@@ -51,23 +64,31 @@ final class HomeViewController: BaseViewController {
         setupNavigationTitle()
         setupNagivationItem()
         setupCollectionView()
-        //ownPresenter.getHomeModel()
+        setTableViewConstraints()
+        setupTableView()
+        ownPresenter.getHomeModel()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showCollectionViewWithAnimation()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableViewHeightConstraint?.constant = tableView.collectionViewLayout.collectionViewContentSize.height
+        view.layoutSubviews()
+    }
 
-    func setupNavigationTitle() {
+    private func setupNavigationTitle() {
         navigationController?.setupLargeTitle("Home")
     }
 
-    func setupNagivationItem() {
+    private func setupNagivationItem() {
         let button: UIButton = UIButton()
         button.setImage(UIImage(named: "starIcon"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
-        button.addTarget(self, action: #selector(touchStartButton(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(touchStartButton(button:)), for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: button)
         self.navigationItem.rightBarButtonItem = barButton
     }
@@ -108,6 +129,8 @@ final class HomeViewController: BaseViewController {
 
     private func arrangeViews() {
         stackView.addArrangedSubview(collectionView)
+        stackView.addArrangedSubview(tableView)
+        view.layoutIfNeeded()
     }
 
     private func setupCollectionView() {
@@ -122,8 +145,26 @@ final class HomeViewController: BaseViewController {
         collectionAdapter.delegate = ownPresenter
     }
 
-    @objc func touchStartButton(_ button: UIButton) {
-        ownPresenter.getHomeModel()
+    private func setTableViewConstraints() {
+        tableViewHeightConstraint = tableView.heightAnchor.constraint(equalToConstant: 100)
+        tableViewHeightConstraint?.isActive = true
+    }
+
+    private func setupTableView() {
+        let identifierCell = CollectionViewCellIdentifier.homeTableCell
+
+        tableView.register(HomeTableCell.self, forCellWithReuseIdentifier: identifierCell.rawValue)
+        tableAdapter = HomeTableAdapter(identifierCell: .homeTableCell)
+        tableView.dataSource = tableAdapter
+        tableView.delegate = tableAdapter
+        tableAdapter.data.addAndNotify(observer: self, completionHandler: { [weak self] in
+            self?.tableView.reloadData()
+        })
+        collectionAdapter.delegate = ownPresenter
+    }
+
+    @objc func touchStartButton(button: UIButton) {
+        delegate?.nextPage()
     }
 
     private func showCollectionViewWithAnimation() {
@@ -139,18 +180,18 @@ final class HomeViewController: BaseViewController {
     private func animateCollectionView(lastPositionX: CGFloat, newPositionX: CGFloat) {
         collectionView.layoutIfNeeded()
         collectionView.frame.origin.x += newPositionX
-        UIView.animate(withDuration: 0.8) {
+        UIView.animate(withDuration: 1.5) {
             self.collectionView.frame.origin.x = lastPositionX
         }
     }
 }
 
 extension HomeViewController: HomeView {
-    
+
     func setHomeModels(_ models: [HomeModel]) {
         collectionAdapter?.data.value = models
     }
-    
+
     func showError(_ error: Error) {
         print(error)
     }
@@ -161,6 +202,18 @@ extension HomeViewController: HomeView {
         }) { (finished) in
             self.hideCollectionViewWithAnimation()
         }
+    }
+
+    func setHomeModelsToTable(_ models: [HomeModel]) {
+        tableAdapter.data.value = models
+    }
+
+    func showSkeleton() {
+        collectionView.superview?.showSkeleton()
+    }
+
+    func hideSkeleton() {
+        collectionView.superview?.hideSkeleton()
     }
 }
 
