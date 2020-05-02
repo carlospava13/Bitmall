@@ -32,7 +32,7 @@ final class HomeViewController: BaseViewController {
         var collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .green
         collectionView.indicatorStyle = .white
         return collectionView
     }()
@@ -146,7 +146,7 @@ final class HomeViewController: BaseViewController {
     }
 
     private func setTableViewConstraints() {
-        tableViewHeightConstraint = tableView.heightAnchor.constraint(equalToConstant: 100)
+        tableViewHeightConstraint = tableView.heightAnchor.constraint(equalToConstant: 0)
         tableViewHeightConstraint?.isActive = true
     }
 

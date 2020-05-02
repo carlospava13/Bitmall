@@ -10,6 +10,12 @@ import UIKit
 import BitmallData
 import SDWebImage
 final class SectionCollectionCell: BaseCollectionCell<HomeModel> {
+    
+    lazy var containerView: UIView = {
+        var view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     lazy var imageView: UIImageView = {
         var imageView = UIImageView()
@@ -23,49 +29,56 @@ final class SectionCollectionCell: BaseCollectionCell<HomeModel> {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 11)
         return label
     }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         identifier = .sectionCollectionCell
-
-        setConstraint()
+        contentView.addSubview(containerView)
+        setContainerViewConstraints()
         setImageConstraints()
-        setBorder()
+        setConstraint()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+    
+    func setContainerViewConstraints() {
+        let constraints = [
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+        containerView.layoutIfNeeded()
+    }
 
     func setConstraint() {
-        contentView.addSubview(titleLabel)
+        containerView.addSubview(titleLabel)
         let constraints = [
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            titleLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
         ]
         NSLayoutConstraint.activate(constraints)
     }
 
     func setImageConstraints() {
-        contentView.addSubview(imageView)
+        containerView.addSubview(imageView)
         let constraints = [
-            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-            imageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            imageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 8),
+            imageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
             imageView.heightAnchor.constraint(equalToConstant: 50),
             imageView.widthAnchor.constraint(equalToConstant: 50)
         ]
         NSLayoutConstraint.activate(constraints)
-    }
-
-    func setBorder() {
-        imageView.layoutIfNeeded()
-        imageView.layer.borderColor = UIColor.black.cgColor
-        imageView.layer.borderWidth = 1
-        imageView.layer.cornerRadius = imageView.frame.height / 2
     }
 
     override func setData(_ data: HomeModel) {
