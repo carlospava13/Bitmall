@@ -9,5 +9,9 @@
 import Foundation
 
 public protocol HomeRepositoryType: AnyObject {
-    func getHomeModel(completion: @escaping(_ result:Result<[HomeApiModel], Error>) -> Void)
+    func getHomeModel(completion: @escaping(_ result:Result<[HomeSectionApiModel], Error>) -> Void)
+}
+
+public protocol HomeProductRepositoryType: AnyObject {
+    func getProducstAbout(type: String, completion: @escaping(_ result:Result<[HomeProductApiModel], Error>) -> Void)
 }

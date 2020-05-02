@@ -9,7 +9,7 @@
 import UIKit
 import BitmallData
 
-final class HomeTableCell: BaseCollectionCell<HomeModel> {
+final class HomeTableCell: BaseCollectionCell<HomeProductModel> {
 
     private lazy var titleLabel: UILabel = {
         var label = UILabel()
@@ -39,7 +39,7 @@ final class HomeTableCell: BaseCollectionCell<HomeModel> {
         contentView.layoutSubviews()
     }
 
-    override func setData(_ data: HomeModel) {
+    override func setData(_ data: HomeProductModel) {
         titleLabel.text = data.title
     }
 }

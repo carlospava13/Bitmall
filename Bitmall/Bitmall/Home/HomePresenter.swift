@@ -12,7 +12,8 @@ import Firebase
 
 final class HomePresenter: BasePresenter, HomePresenterType {
 
-    var worker: HomeWorker!
+    var worker: HomeSectionWorker!
+    var workerProduct: HomeProductsWorker!
     
     var ownView: HomeView {
         return view as! HomeView
@@ -20,27 +21,43 @@ final class HomePresenter: BasePresenter, HomePresenterType {
     
     override init() {
         super.init()
-        let firebase: FirebaseApiClient<HomeApiModel> = FirebaseApiClient()
-        worker = HomeWorker(repository: HomeRepository(apiClient: firebase))
+        let firebase: FirebaseApiClient<HomeSectionApiModel> = FirebaseApiClient()
+        worker = HomeSectionWorker(repository: HomeRepository(apiClient: firebase))
+        workerProduct = HomeProductsWorker(repository: HomeProductRepository(apiClient: firebase))
     }
 
     func getHomeModel() {
         ownView.showSkeleton()
-        worker.buildCase { (result) in
+        worker.buildCase(params: nil) { (result) in
             switch result {
             case .success(let models):
                 self.ownView.setHomeModels(models)
-                self.ownView.setHomeModelsToTable(models)
+                guard let firtSection = models.first else {
+                    return
+                }
+                self.selectedSection(type: firtSection.type.rawValue)
             case .failure(let error):
                 self.ownView.showError(error)
             }
             self.ownView.hideSkeleton()
         }
     }
+    
+    func selectedSection(type: String) {
+        workerProduct.buildCase(params: type) { (result) in
+            switch result {
+            case .success(let homeProducts):
+                self.ownView.setHomeModelsToTable(homeProducts)
+            case .failure(let error):
+                self.ownView.showError(error)
+            }
+        }
+    }
+    
 }
 
 extension HomePresenter: HomeCollectionAdapterType {
     func selectedItem(_ item: HomeModel, row: Int) {
-        ownView.updateItem(!item.selected, row: row)
+        selectedSection(type: item.type.rawValue)
     }
 }

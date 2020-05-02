@@ -11,5 +11,6 @@ import Foundation
 public struct HomeModel {
     public let title: String
     public let imageUrl: String?
+    public let type: Type
     public var selected: Bool = false
 }

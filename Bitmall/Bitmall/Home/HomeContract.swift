@@ -16,7 +16,7 @@ protocol HomePresenterType: PresenterType, HomeCollectionAdapterType {
 protocol HomeView: ViewType {
     func setHomeModels(_ models: [HomeModel])
     func updateItem(_ state: Bool, row: Int)
-    func setHomeModelsToTable(_ models: [HomeModel])
+    func setHomeModelsToTable(_ models: [HomeProductModel])
     func showSkeleton()
     func hideSkeleton()
     func showError(_ error: Error)

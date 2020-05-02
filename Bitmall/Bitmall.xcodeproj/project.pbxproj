@@ -39,8 +39,8 @@
 		D16B8E18245DC4C600619126 /* SectionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE66B245C911E00E4F067 /* SectionCollectionCell.swift */; };
 		D16B8E19245DC4CC00619126 /* HomeCollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13AE667245C90AA00E4F067 /* HomeCollectionAdapter.swift */; };
 		D16B8E1A245DC4D200619126 /* HomeTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B8E0F245DC16E00619126 /* HomeTableAdapter.swift */; };
-		D1E9962B245D046300F68C85 /* BitmallData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E9962A245D046300F68C85 /* BitmallData.framework */; };
-		D1E9962C245D046300F68C85 /* BitmallData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1E9962A245D046300F68C85 /* BitmallData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D16B8E29245DD7E000619126 /* BitmallData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16B8E28245DD7E000619126 /* BitmallData.framework */; };
+		D16B8E2A245DD7E000619126 /* BitmallData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D16B8E28245DD7E000619126 /* BitmallData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D1E9963B245D106700F68C85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1E9963A245D106700F68C85 /* GoogleService-Info.plist */; };
 		D1E9963E245D14F100F68C85 /* FirebaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9963D245D14F100F68C85 /* FirebaseApiClient.swift */; };
 		D1E99640245D1F7F00F68C85 /* UIView+Skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9963F245D1F7F00F68C85 /* UIView+Skeleton.swift */; };
@@ -64,13 +64,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D1E9962D245D046300F68C85 /* Embed Frameworks */ = {
+		D16B8E2B245DD7E000619126 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D1E9962C245D046300F68C85 /* BitmallData.framework in Embed Frameworks */,
+				D16B8E2A245DD7E000619126 /* BitmallData.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +121,7 @@
 		D13AE671245C9A0500E4F067 /* CollectionDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDisplay.swift; sourceTree = "<group>"; };
 		D16B8E0F245DC16E00619126 /* HomeTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableAdapter.swift; sourceTree = "<group>"; };
 		D16B8E11245DC1AC00619126 /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
+		D16B8E28245DD7E000619126 /* BitmallData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitmallData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E9962A245D046300F68C85 /* BitmallData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitmallData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E9963A245D106700F68C85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1E9963D245D14F100F68C85 /* FirebaseApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseApiClient.swift; sourceTree = "<group>"; };
@@ -133,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1E9962B245D046300F68C85 /* BitmallData.framework in Frameworks */,
+				D16B8E29245DD7E000619126 /* BitmallData.framework in Frameworks */,
 				9508925CBDC8C9125E4FC327 /* Pods_Bitmall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +161,7 @@
 		0931E863FF4338AD131FD422 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D16B8E28245DD7E000619126 /* BitmallData.framework */,
 				D1E9962A245D046300F68C85 /* BitmallData.framework */,
 				490B2C3E4B4D348C8937D424 /* Pods_Bitmall.framework */,
 				40D8558CED2E4584228B74C6 /* Pods_Bitmall_BitmallUITests.framework */,
@@ -343,7 +345,7 @@
 				D13AE60B245C733400E4F067 /* Frameworks */,
 				D13AE60C245C733400E4F067 /* Resources */,
 				747F86D831D2689AB98C5D3A /* [CP] Embed Pods Frameworks */,
-				D1E9962D245D046300F68C85 /* Embed Frameworks */,
+				D16B8E2B245DD7E000619126 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

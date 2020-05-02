@@ -32,7 +32,7 @@ final class HomeViewController: BaseViewController {
         var collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        collectionView.backgroundColor = .green
+        collectionView.backgroundColor = .white
         collectionView.indicatorStyle = .white
         return collectionView
     }()
@@ -72,12 +72,6 @@ final class HomeViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showCollectionViewWithAnimation()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        tableViewHeightConstraint?.constant = tableView.collectionViewLayout.collectionViewContentSize.height
-        view.layoutSubviews()
     }
 
     private func setupNavigationTitle() {
@@ -159,8 +153,16 @@ final class HomeViewController: BaseViewController {
         tableView.delegate = tableAdapter
         tableAdapter.data.addAndNotify(observer: self, completionHandler: { [weak self] in
             self?.tableView.reloadData()
+            self?.updateTable()
         })
         collectionAdapter.delegate = ownPresenter
+    }
+
+    private func updateTable() {
+        tableViewHeightConstraint?.constant = tableView.collectionViewLayout.collectionViewContentSize.height
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutSubviews()
+        }
     }
 
     @objc func touchStartButton(button: UIButton) {
@@ -204,7 +206,7 @@ extension HomeViewController: HomeView {
         }
     }
 
-    func setHomeModelsToTable(_ models: [HomeModel]) {
+    func setHomeModelsToTable(_ models: [HomeProductModel]) {
         tableAdapter.data.value = models
     }
 

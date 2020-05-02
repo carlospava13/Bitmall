@@ -11,6 +11,7 @@ import Foundation
 protocol WorkerType: AnyObject {
     associatedtype Respository
     associatedtype Model
+    associatedtype Params
     init(repository:Respository)
-    func buildCase(completion: @escaping(_ result: Result<Model,Error>) -> Void)
+    func buildCase(params: Params,completion: @escaping(_ result: Result<Model,Error>) -> Void)
 }

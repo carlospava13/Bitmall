@@ -9,6 +9,6 @@
 import UIKit
 import BitmallData
 
-final class HomeTableAdapter: GenericDataSource<HomeTableCell, HomeModel> {
+final class HomeTableAdapter: GenericDataSource<HomeTableCell, HomeProductModel> {
     
 }
