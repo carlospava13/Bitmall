@@ -10,4 +10,5 @@ import Foundation
 
 public struct HomeProductModel: Codable {
     public var title: String
+    public var imageUrl: String?
 }

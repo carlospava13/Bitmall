@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol HomeViewControllerDelegate: AnyObject {
+public protocol HomeViewControllerDelegate: AnyObject {
     func nextPage()
 }

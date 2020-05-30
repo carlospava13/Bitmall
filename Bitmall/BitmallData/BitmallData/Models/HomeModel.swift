@@ -11,6 +11,11 @@ import Foundation
 public struct HomeModel {
     public let title: String
     public let imageUrl: String?
-    public let type: Type
+    public let type: HomeType
     public var selected: Bool = false
+}
+
+public enum HomeType: String, Codable {
+    case food
+    case technology
 }

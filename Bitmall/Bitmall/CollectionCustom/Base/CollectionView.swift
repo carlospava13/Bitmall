@@ -10,8 +10,12 @@ import UIKit
 
 class CollectionView: UICollectionView {
     
+    var flowLayout: CollectionViewHorizontalCustom = {
+        return CollectionViewHorizontalCustom(display: .list)
+    }()
+    
     init(frame: CGRect, layout: CollectionDisplay) {
-        let flowLayout = CollectionViewHorizontalCustom(display: layout)
+        flowLayout = CollectionViewHorizontalCustom(display: layout)
         super.init(frame: frame, collectionViewLayout: flowLayout)
         setBackgroundWhiteColor()
     }
@@ -32,6 +36,10 @@ class CollectionView: UICollectionView {
     func setBackgroundWhiteColor() {
         self.backgroundColor = .white
         self.indicatorStyle = .white
+    }
+    
+    func setHeight(_ height: CGFloat) {
+        flowLayout.height = height
     }
     
     func setAdapter<Cell:BaseCollectionCell<T>, T>(_ adapter: GenericDataSource<Cell, T>) {

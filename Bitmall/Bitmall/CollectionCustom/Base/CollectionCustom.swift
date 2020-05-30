@@ -17,22 +17,26 @@ class CollectionViewHorizontalCustom: UICollectionViewFlowLayout {
              }
          }
      }
+    
+    var height: CGFloat? = 0 {
+        didSet {
+            self.configLayout()
+        }
+    }
 
      convenience init(display: CollectionDisplay) {
          self.init()
-
          self.display = display
          self.minimumLineSpacing = 10
          self.minimumInteritemSpacing = 10
-         self.configLayout()
      }
 
      func configLayout() {
          switch display {
          case .inline:
              self.scrollDirection = .horizontal
-             if let collectionView = self.collectionView {
-                 self.itemSize = CGSize(width: 100, height: 100)
+             if let height = self.height {
+                 self.itemSize = CGSize(width: height, height: height)
              }
 
          case .grid:
@@ -45,8 +49,8 @@ class CollectionViewHorizontalCustom: UICollectionViewFlowLayout {
 
          case .list:
              self.scrollDirection = .vertical
-             if let collectionView = self.collectionView {
-                 self.itemSize = CGSize(width: collectionView.frame.width , height: 130)
+             if let collectionView = self.collectionView, let height = self.height {
+                 self.itemSize = CGSize(width: collectionView.frame.width , height: height)
              }
          }
      }

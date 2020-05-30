@@ -18,7 +18,7 @@ class MainCoordinator: CoordinatorType {
 
     func start() {
         let homeVC = HomeViewController()
-        homeVC.delegate = self
+        homeVC.router = self
         homeVC.presenter = HomePresenter()
         navigationController.viewControllers = [homeVC]
     }

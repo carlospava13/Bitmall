@@ -11,7 +11,7 @@ import BitmallData
 
 final class HomeViewController: BaseViewController {
 
-    weak var delegate: HomeViewControllerDelegate?
+    var router: HomeViewControllerDelegate?
 
     //MARK: Views
     lazy var scrollView: UIScrollView = {
@@ -24,7 +24,15 @@ final class HomeViewController: BaseViewController {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
+        stackView.spacing = 10
         return stackView
+    }()
+
+    private lazy var containerSectionCollection: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .clear
+        return view
     }()
 
     private lazy var sectionCollection: SectionCollection = {
@@ -32,7 +40,9 @@ final class HomeViewController: BaseViewController {
     }()
 
     private lazy var tableView: CollectionView = {
-        return CollectionView(frame: .zero, layout: .list)
+        let collectionView = CollectionView(frame: .zero, layout: .list)
+        collectionView.setHeight(80)
+        return collectionView
     }()
 
     //MARK: Adapter
@@ -85,6 +95,7 @@ final class HomeViewController: BaseViewController {
     override func setConstraints() {
         setupScrollConstraints()
         setupStackViewConstraints()
+        setCollectionConstraints()
     }
 
     private func setupScrollConstraints() {
@@ -103,16 +114,29 @@ final class HomeViewController: BaseViewController {
             stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 8),
             stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            stackView.widthAnchor.constraint(equalTo: view.widthAnchor)
+            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -8),
+            stackView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            //stackView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor)
+            //stackView.widthAnchor.constraint(equalTo: view.widthAnchor)
         ]
         NSLayoutConstraint.activate(constraints)
         view.layoutIfNeeded()
         arrangeViews()
     }
+    
+    private func setCollectionConstraints() {
+        containerSectionCollection.addSubview(sectionCollection)
+        let constraints = [
+            sectionCollection.topAnchor.constraint(equalTo: containerSectionCollection.topAnchor),
+            sectionCollection.leadingAnchor.constraint(equalTo: containerSectionCollection.leadingAnchor),
+            sectionCollection.trailingAnchor.constraint(equalTo: containerSectionCollection.trailingAnchor),
+            sectionCollection.bottomAnchor.constraint(equalTo: containerSectionCollection.bottomAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
 
     private func arrangeViews() {
-        stackView.addArrangedSubview(sectionCollection)
+        stackView.addArrangedSubview(containerSectionCollection)
         stackView.addArrangedSubview(tableView)
         view.layoutIfNeeded()
     }
@@ -148,14 +172,14 @@ final class HomeViewController: BaseViewController {
     }
 
     private func updateTable() {
-        tableViewHeightConstraint?.constant = tableView.collectionViewLayout.collectionViewContentSize.height
-        UIView.animate(withDuration: 0.2) {
+        tableViewHeightConstraint?.constant = tableView.collectionViewLayout.collectionViewContentSize.height + 8
+        UIView.animate(withDuration: 1) {
             self.view.layoutSubviews()
         }
     }
 
     @objc func touchStartButton(button: UIButton) {
-        delegate?.nextPage()
+        router?.nextPage()
     }
 }
 

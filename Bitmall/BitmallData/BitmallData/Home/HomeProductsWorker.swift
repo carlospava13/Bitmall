@@ -34,6 +34,6 @@ public class HomeProductsWorker: WorkerType {
     }
     
     private func parseHomeProductModel(apiModel: [HomeProductApiModel]) -> [HomeProductModel] {
-        return apiModel.map({ return HomeProductModel(title: $0.title) })
+        return apiModel.map({ return HomeProductModel(title: $0.title, imageUrl: $0.imageUrl) })
     }
 }
