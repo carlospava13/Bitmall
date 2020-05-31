@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='BitmallUITests.xctest' tests='4' failures='0'>
+  <testsuite name='BitmallTests.BitmallTests' tests='2' failures='0'>
+    <testcase classname='BitmallTests.BitmallTests' name='testExample' time='0.001'/>
+    <testcase classname='BitmallTests.BitmallTests' name='testPerformanceExample' time='0.459'/>
+  </testsuite>
+  <testsuite name='BitmallUITests.BitmallUITests' tests='2' failures='0'>
+    <testcase classname='BitmallUITests.BitmallUITests' name='testExample' time='2.163'/>
+    <testcase classname='BitmallUITests.BitmallUITests' name='testLaunchPerformance' time='20.354'/>
+  </testsuite>
+</testsuites>
